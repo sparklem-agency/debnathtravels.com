@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Laravel\Folio\Folio;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
+        Folio::path(resource_path('views/pages/admin'))
+            ->uri('/admin')
+            ->middleware([
+                '*' => [
+                    'auth',
+                    'verified'
+                ],
+            ]);
     }
 }

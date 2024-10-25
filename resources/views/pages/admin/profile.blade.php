@@ -6,7 +6,7 @@ name('profile');
 
 ?>
 
-<x-admin-layout>
+<x-admin-layout title="Profile">
     <x-jui::heading size="lg">Profile</x-jui::heading>
     <x-jui::breadcrumbs>
         <x-jui::breadcrumbs.item href="{{ route('dashboard') }}">Home</x-jui::breadcrumbs.item>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9b4129628041de60b3745cae4cb30e7",
+    "content-hash": "a76e21be0ee632c020c30da64df16409",
     "packages": [
         {
             "name": "brick/math",
@@ -1155,6 +1155,53 @@
                 "source": "https://github.com/joydeep-bhowmik/laravel-media-library/tree/v1.0.0"
             },
             "time": "2024-10-08T06:28:59+00:00"
+        },
+        {
+            "name": "joydeep-bhowmik/livewire-datatable",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable.git",
+                "reference": "92a6e68c02d74028eeb9dee0397a7c2991e26c7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joydeep-bhowmik/laravel-livewire-datatable/zipball/92a6e68c02d74028eeb9dee0397a7c2991e26c7a",
+                "reference": "92a6e68c02d74028eeb9dee0397a7c2991e26c7a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.0",
+                "livewire/livewire": "^3.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JoydeepBhowmik\\LivewireDatatable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "joydeep-bhowmik",
+                    "email": "bhowmikj9432@gmail.com"
+                }
+            ],
+            "description": "A laravel livewire datatable package ",
+            "keywords": [
+                "datatable",
+                "laravel",
+                "livewire"
+            ],
+            "support": {
+                "issues": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable/issues",
+                "source": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable/tree/v1.0.4"
+            },
+            "time": "2024-08-17T07:53:49+00:00"
         },
         {
             "name": "laravel/folio",

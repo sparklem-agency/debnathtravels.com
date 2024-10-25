@@ -1663,6 +1663,56 @@
             "install-path": "../joydeep-bhowmik/laravel-media-library"
         },
         {
+            "name": "joydeep-bhowmik/livewire-datatable",
+            "version": "v1.0.4",
+            "version_normalized": "1.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable.git",
+                "reference": "92a6e68c02d74028eeb9dee0397a7c2991e26c7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joydeep-bhowmik/laravel-livewire-datatable/zipball/92a6e68c02d74028eeb9dee0397a7c2991e26c7a",
+                "reference": "92a6e68c02d74028eeb9dee0397a7c2991e26c7a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.0",
+                "livewire/livewire": "^3.0",
+                "php": "^8.1"
+            },
+            "time": "2024-08-17T07:53:49+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "JoydeepBhowmik\\LivewireDatatable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "joydeep-bhowmik",
+                    "email": "bhowmikj9432@gmail.com"
+                }
+            ],
+            "description": "A laravel livewire datatable package ",
+            "keywords": [
+                "datatable",
+                "laravel",
+                "livewire"
+            ],
+            "support": {
+                "issues": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable/issues",
+                "source": "https://github.com/joydeep-bhowmik/laravel-livewire-datatable/tree/v1.0.4"
+            },
+            "install-path": "../joydeep-bhowmik/livewire-datatable"
+        },
+        {
             "name": "laravel/breeze",
             "version": "v2.2.1",
             "version_normalized": "2.2.1.0",

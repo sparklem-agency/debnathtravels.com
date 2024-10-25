@@ -8,6 +8,7 @@
         "php": "^8.2",
         "joydeep-bhowmik/joy-ui": "^1.0",
         "joydeep-bhowmik/laravel-media-library": "^1.0",
+        "joydeep-bhowmik/livewire-datatable": "^1.0",
         "laravel/folio": "^1.1",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",

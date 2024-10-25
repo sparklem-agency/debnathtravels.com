@@ -77,6 +77,7 @@ return array(
     'Laravel\\Prompts\\' => array($vendorDir . '/laravel/prompts/src'),
     'Laravel\\Folio\\' => array($vendorDir . '/laravel/folio/src'),
     'Laravel\\Breeze\\' => array($vendorDir . '/laravel/breeze/src'),
+    'JoydeepBhowmik\\LivewireDatatable\\' => array($vendorDir . '/joydeep-bhowmik/livewire-datatable/src'),
     'JoydeepBhowmik\\LaravelMediaLibary\\Tests\\' => array($vendorDir . '/joydeep-bhowmik/laravel-media-library/tests'),
     'JoydeepBhowmik\\LaravelMediaLibary\\' => array($vendorDir . '/joydeep-bhowmik/laravel-media-library/src'),
     'JoydeepBhowmik\\JoyUI\\Tests\\' => array($vendorDir . '/joydeep-bhowmik/joy-ui/tests'),

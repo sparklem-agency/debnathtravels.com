@@ -18,7 +18,10 @@
                     <div class="relative z-10 -mt-5 rounded-2xl bg-[#1B202E] p-4 text-white">
                         <h2 class="text-xl font-bold">Innova Crysta</h2>
                         <p>Starting From <b>500 rs</b> per person</p>
-                        <div class="mt-3 w-fit rounded-full bg-white p-2 text-center text-black">6 Seaters</div>
+                        <div
+                            class="mt-3 w-fit rounded-full bg-white p-2 text-center text-xs font-medium uppercase text-black">
+                            6
+                            Seaters</div>
                     </div>
                 </div>
             @endforeach

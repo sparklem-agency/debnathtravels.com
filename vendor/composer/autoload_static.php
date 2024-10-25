@@ -17,10 +17,10 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
-        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
+        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
@@ -34,9 +34,9 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         '7f7ac2ddea9cc3fb4b2cc201d63dbc10' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Log/functions.php',
         '493c6aea52f6009bab023b26c21a386a' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/functions.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'aadac1114cab8dc19489a7f6dc24c003' => __DIR__ . '/..' . '/pestphp/pest-plugin-arch/src/Autoload.php',
-        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         'f83ed111c2f97a0449abf067f157f418' => __DIR__ . '/..' . '/pestphp/pest/src/Functions.php',
         '7d2876738dc0328edeb8a103c76cd8e7' => __DIR__ . '/..' . '/pestphp/pest/src/Pest.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
@@ -151,6 +151,7 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         ),
         'J' => 
         array (
+            'JoydeepBhowmik\\LivewireDatatable\\' => 33,
             'JoydeepBhowmik\\LaravelMediaLibary\\Tests\\' => 40,
             'JoydeepBhowmik\\LaravelMediaLibary\\' => 34,
             'JoydeepBhowmik\\JoyUI\\Tests\\' => 27,
@@ -495,6 +496,10 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         array (
             0 => __DIR__ . '/..' . '/laravel/breeze/src',
         ),
+        'JoydeepBhowmik\\LivewireDatatable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src',
+        ),
         'JoydeepBhowmik\\LaravelMediaLibary\\Tests\\' => 
         array (
             0 => __DIR__ . '/..' . '/joydeep-bhowmik/laravel-media-library/tests',
@@ -621,11 +626,15 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
     public static $classMap = array (
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Middleware\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminMiddleware.php',
         'App\\Livewire\\Actions\\Logout' => __DIR__ . '/../..' . '/app/Livewire/Actions/Logout.php',
         'App\\Livewire\\Forms\\LoginForm' => __DIR__ . '/../..' . '/app/Livewire/Forms/LoginForm.php',
+        'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Providers\\FolioServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FolioServiceProvider.php',
         'App\\Providers\\VoltServiceProvider' => __DIR__ . '/../..' . '/app/Providers/VoltServiceProvider.php',
+        'App\\View\\Components\\AdminLayout' => __DIR__ . '/../..' . '/app/View/Components/AdminLayout.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -2985,6 +2994,11 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         'JoydeepBhowmik\\LaravelMediaLibary\\Models\\Media' => __DIR__ . '/..' . '/joydeep-bhowmik/laravel-media-library/src/Models/Media.php',
         'JoydeepBhowmik\\LaravelMediaLibary\\Providers\\LaravelMediaServiceProvider' => __DIR__ . '/..' . '/joydeep-bhowmik/laravel-media-library/src/Providers/LaravelMediaServiceProvider.php',
         'JoydeepBhowmik\\LaravelMediaLibary\\Traits\\HasMedia' => __DIR__ . '/..' . '/joydeep-bhowmik/laravel-media-library/src/Traits/HasMedia.php',
+        'JoydeepBhowmik\\LivewireDatatable\\Datatable' => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src/Datatable.php',
+        'JoydeepBhowmik\\LivewireDatatable\\Providers\\DataTableServiceProvider' => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src/Providers/DataTableServiceProvider.php',
+        'JoydeepBhowmik\\LivewireDatatable\\utils\\Button' => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src/utils/Button.php',
+        'JoydeepBhowmik\\LivewireDatatable\\utils\\Field' => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src/utils/Field.php',
+        'JoydeepBhowmik\\LivewireDatatable\\utils\\Filter' => __DIR__ . '/..' . '/joydeep-bhowmik/livewire-datatable/src/utils/Filter.php',
         'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
         'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
         'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',

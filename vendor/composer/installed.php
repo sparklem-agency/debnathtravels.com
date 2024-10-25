@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '71f89346c18f1ce8baec63b724d72d4f0019293f',
+        'reference' => '44a69553d34d504b3b33d2bf78615a3397e2a61b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -424,6 +424,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'joydeep-bhowmik/livewire-datatable' => array(
+            'pretty_version' => 'v1.0.4',
+            'version' => '1.0.4.0',
+            'reference' => '92a6e68c02d74028eeb9dee0397a7c2991e26c7a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../joydeep-bhowmik/livewire-datatable',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -460,7 +469,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '71f89346c18f1ce8baec63b724d72d4f0019293f',
+            'reference' => '44a69553d34d504b3b33d2bf78615a3397e2a61b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

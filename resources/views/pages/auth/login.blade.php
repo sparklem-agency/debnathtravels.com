@@ -27,36 +27,25 @@ new #[Layout('layouts.guest')] class extends Component {
 
     @volt('login')
         <div>
-            <!-- Session Status -->
-            <x-auth-session-status class="mb-4" :status="session('status')" />
 
             <form wire:submit="login">
+                <x-mary-header title='Login' />
                 <!-- Email Address -->
                 <div>
-                    <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input class="mt-1 block w-full" id="email" name="email" type="email" wire:model="form.email"
-                        required autofocus autocomplete="username" />
-                    <x-input-error class="mt-2" :messages="$errors->get('form.email')" />
+                    <x-mary-input class="mt-1 block w-full" id="email" name="email" type="email" inline label="Email"
+                        wire:model="form.email" autofocus autocomplete="username" />
                 </div>
 
                 <!-- Password -->
                 <div class="mt-4">
-                    <x-input-label for="password" :value="__('Password')" />
 
-                    <x-text-input class="mt-1 block w-full" id="password" name="password" type="password"
-                        wire:model="form.password" required autocomplete="current-password" />
-
-                    <x-input-error class="mt-2" :messages="$errors->get('form.password')" />
+                    <x-mary-password class="mt-1 block w-full" id="password" name="password" type="password" inline right
+                        label='Password' wire:model="form.password" autocomplete="current-password" />
                 </div>
 
                 <!-- Remember Me -->
                 <div class="mt-4 block">
-                    <label class="inline-flex items-center" for="remember">
-                        <input
-                            class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
-                            id="remember" name="remember" type="checkbox" wire:model="form.remember">
-                        <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-                    </label>
+                    <x-mary-checkbox wire:model="form.remember" label='Remember me' />
                 </div>
 
                 <div class="mt-4 flex items-center justify-end">
@@ -67,9 +56,9 @@ new #[Layout('layouts.guest')] class extends Component {
                         </a>
                     @endif
 
-                    <x-primary-button class="ms-3" wireTarget="login">
+                    <x-mary-button class="ms-3" type="submit" wireTarget="login">
                         {{ __('Log in') }}
-                    </x-primary-button>
+                    </x-mary-button>
                 </div>
             </form>
         </div>

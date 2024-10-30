@@ -17,6 +17,10 @@ class AdminMiddleware
     {
         $user = $request->user();
 
+        if (!$user) {
+            return redirect(route('login'));
+        }
+
         if ($user && $user->role === 'admin')
 
             return $next($request);

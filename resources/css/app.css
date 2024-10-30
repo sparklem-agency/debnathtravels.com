@@ -10,6 +10,10 @@
     :root {
         --primary: #2054ff;
     }
+    .active {
+        @apply border-b-2 pb-3 border-black;
+    }
+
     .link {
         @apply text-blue-500 underline;
     }

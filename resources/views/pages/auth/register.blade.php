@@ -38,41 +38,35 @@ new #[Layout('layouts.guest')] class extends Component {
 <x-guest-layout title="Register">
     @volt
         <div>
-            <form wire:submit="register">
+            <x-mary-header title='Create Account' />
+            <x-mary-form wire:submit="register">
                 <!-- Name -->
                 <div>
-                    <x-input-label for="name" :value="__('Name')" />
-                    <x-text-input class="mt-1 block w-full" id="name" name="name" type="text" wire:model="name"
-                        required autofocus autocomplete="name" />
-                    <x-input-error class="mt-2" :messages="$errors->get('name')" />
+
+                    <x-mary-input class="mt-1 block w-full" id="name" name="name" type="text" inline label='Name'
+                        wire:model="name" autofocus autocomplete="name" />
+
                 </div>
 
                 <!-- Email Address -->
                 <div class="mt-4">
-                    <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input class="mt-1 block w-full" id="email" name="email" type="email" wire:model="email"
-                        required autocomplete="username" />
-                    <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                    <x-mary-input class="mt-1 block w-full" id="email" name="email" type="email" inline
+                        label="Email" wire:model="email" autocomplete="username" />
                 </div>
 
                 <!-- Password -->
                 <div class="mt-4">
-                    <x-input-label for="password" :value="__('Password')" />
-
-                    <x-text-input class="mt-1 block w-full" id="password" name="password" type="password"
-                        wire:model="password" required autocomplete="new-password" />
-
-                    <x-input-error class="mt-2" :messages="$errors->get('password')" />
+                    <x-mary-password class="mt-1 block w-full" id="password" name="password" type="password" inline right
+                        label="Password" wire:model="password" autocomplete="new-password" />
                 </div>
 
                 <!-- Confirm Password -->
                 <div class="mt-4">
-                    <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                    <x-text-input class="mt-1 block w-full" id="password_confirmation" name="password_confirmation"
-                        type="password" wire:model="password_confirmation" required autocomplete="new-password" />
+                    <x-mary-password class="mt-1 block w-full" id="password_confirmation" name="password_confirmation"
+                        type="password" label=" confirm password" inline right wire:model="password_confirmation"
+                        autocomplete="new-password" />
 
-                    <x-input-error class="mt-2" :messages="$errors->get('password_confirmation')" />
                 </div>
 
                 <div class="mt-4 flex items-center justify-end">
@@ -81,11 +75,13 @@ new #[Layout('layouts.guest')] class extends Component {
                         {{ __('Already registered?') }}
                     </a>
 
-                    <x-primary-button class="ms-4" wireTarget="register">
-                        {{ __('Register') }}
-                    </x-primary-button>
+                    <x-slot:actions>
+                        <x-mary-button type="submit">
+                            {{ __('Register') }}
+                        </x-mary-button>
+                    </x-slot:actions>
                 </div>
-            </form>
+            </x-mary-form>
         </div>
     @endvolt
 </x-guest-layout>

@@ -25,7 +25,12 @@ new class extends Component {
 
     @volt('admin.blogs')
         <div>
-            <x-mary-header title='Blogs' />
+            <x-mary-header title='Blogs'>
+
+                <x-slot:actions>
+                    <x-mary-button class="btn-primary" icon="o-plus" :link="route('admin.blogs.create')" />
+                </x-slot:actions>
+            </x-mary-header>
 
             @if ($blogs && count($blogs))
                 <div class="grid grid-cols-2 gap-5">

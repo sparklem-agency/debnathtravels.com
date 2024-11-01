@@ -2,12 +2,11 @@
     <div>
         <x-logo />
     </div>
-    <div class="hidden items-center justify-center gap-8 text-[13px] text-white lg:flex">
-        <a href="http://">About Us</a>
-        <a href="http://">Blog</a>
-        <a href="http://">Gallery</a>
-        <a href="http://">Packages</a>
-        <a href="http://">Locations</a>
+    <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
+        <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
+        <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
+        <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
+        <a href="{{ route('packages') }}" @class(['p-3', 'active' => request()->routeIs('packages')])>Packages</a>
     </div>
     <div class="flex items-center">
         <a class="ml-auto flex items-center gap-2 rounded-full p-2 px-3 text-[13px] font-medium text-white"

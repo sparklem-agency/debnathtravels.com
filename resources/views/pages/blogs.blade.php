@@ -1,14 +1,14 @@
 <?php
 use function Laravel\Folio\{name};
 
-name('packages');
+name('blogs');
 
 ?>
-<x-app-layout title="Packages">
+<x-app-layout title="Blogs">
     <x-page-heading>
-        Packages
+        Blogs
     </x-page-heading>
     <div class="p-5 py-10">
-        <x-packages />
+
     </div>
 </x-app-layout>

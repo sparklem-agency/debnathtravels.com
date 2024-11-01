@@ -24,6 +24,12 @@
     <link href="https://unpkg.com/easymde/dist/easymde.min.css" rel="stylesheet">
     <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" rel="stylesheet" />
+
+    {{-- Sortable.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
@@ -74,11 +80,13 @@
                     <x-mary-menu-separator />
                 @endif
 
-                <x-mary-menu-item title="Dashboard" icon="o-home" link="/" active="true" />
-                <x-mary-menu-sub title="Settings" icon="o-cog-6-tooth">
-                    <x-mary-menu-item title="Wifi" icon="o-wifi" link="####" />
-                    <x-mary-menu-item title="Archives" icon="o-archive-box" link="####" />
-                </x-mary-menu-sub>
+                <x-mary-menu-item title="Dashboard" icon="o-home" :link="route('dashboard')" :active="request()->routeIs('dashboard')" />
+
+                <x-mary-menu-item title="Gallery" icon="o-photo" :link="route('admin.gallery')" :active="request()->routeIs('admin.gallery')" />
+
+                <x-mary-menu-item title="Packages" icon="o-archive-box" :link="route('admin.packages')" :active="request()->routeIs('admin.packages')" />
+
+                <x-mary-menu-item title="Blogs" icon="o-document" :link="route('admin.blogs')" :active="request()->routeIs('admin.packages')" />
             </x-mary-menu>
         </x-slot:sidebar>
 

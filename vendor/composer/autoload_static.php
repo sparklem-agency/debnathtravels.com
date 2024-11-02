@@ -641,6 +641,16 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -649,6 +659,7 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         'App\\Livewire\\DataTables\\BlogTable' => __DIR__ . '/../..' . '/app/Livewire/DataTables/BlogTable.php',
         'App\\Livewire\\Forms\\LoginForm' => __DIR__ . '/../..' . '/app/Livewire/Forms/LoginForm.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
+        'App\\Models\\Package' => __DIR__ . '/../..' . '/app/Models/Package.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\FolioServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FolioServiceProvider.php',
@@ -5265,6 +5276,7 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         'ParaTest\\WrapperRunner\\WorkerCrashedException' => __DIR__ . '/..' . '/brianium/paratest/src/WrapperRunner/WorkerCrashedException.php',
         'ParaTest\\WrapperRunner\\WrapperRunner' => __DIR__ . '/..' . '/brianium/paratest/src/WrapperRunner/WrapperRunner.php',
         'ParaTest\\WrapperRunner\\WrapperWorker' => __DIR__ . '/..' . '/brianium/paratest/src/WrapperRunner/WrapperWorker.php',
+        'Parsedown' => __DIR__ . '/..' . '/erusev/parsedown/Parsedown.php',
         'Pest\\ArchPresets\\AbstractPreset' => __DIR__ . '/..' . '/pestphp/pest/src/ArchPresets/AbstractPreset.php',
         'Pest\\ArchPresets\\Custom' => __DIR__ . '/..' . '/pestphp/pest/src/ArchPresets/Custom.php',
         'Pest\\ArchPresets\\Laravel' => __DIR__ . '/..' . '/pestphp/pest/src/ArchPresets/Laravel.php',
@@ -7833,6 +7845,7 @@ class ComposerStaticInitc9cf8355cf565febe7c2728436cca564
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitc9cf8355cf565febe7c2728436cca564::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc9cf8355cf565febe7c2728436cca564::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc9cf8355cf565febe7c2728436cca564::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitc9cf8355cf565febe7c2728436cca564::$classMap;
 
         }, null, ClassLoader::class);

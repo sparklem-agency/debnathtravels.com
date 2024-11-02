@@ -9,7 +9,7 @@
         </div>
 
         <div>
-            <div class="mt-10 grid grid-cols-2 gap-5">
+            <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
                 <div class="relative space-y-20">
                     <div>
                         <div class="border-b border-black">
@@ -48,7 +48,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-10">
+                <div class="hidden p-10 md:block">
                     <img src="{{ url('assets/side-image-why-us.png') }}" alt="">
                 </div>
             </div>

@@ -1,4 +1,6 @@
-<nav {{ $attributes->merge(['class' => 'p-3 grid grid-cols-2 lg:grid-cols-3']) }}>
+<nav {{ $attributes->merge(['class' => 'p-3 grid grid-cols-2 lg:grid-cols-3']) }} x-data="{
+    showMenu: false
+}">
     <div>
         <x-logo />
     </div>
@@ -8,8 +10,35 @@
         <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
         <a href="{{ route('packages') }}" @class(['p-3', 'active' => request()->routeIs('packages')])>Packages</a>
     </div>
-    <div class="flex items-center">
-        <a class="ml-auto flex items-center gap-2 rounded-full p-2 px-3 text-[13px] font-medium text-white"
+    {{-- mobile menu --}}
+    <div class="fixed inset-0 z-50 grid place-items-center text-white backdrop-blur-3xl" x-transition x-show="showMenu">
+
+        <button class="fixed right-4 top-4" type="button" @click="showMenu=false">
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+
+        </button>
+        <div class="flex flex-col items-center justify-center gap-3">
+            <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('home')])>Home</a>
+            <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
+            <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
+            <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
+            <a href="{{ route('packages') }}" @class(['p-3', 'active' => request()->routeIs('packages')])>Packages</a>
+        </div>
+    </div>
+
+    <div class="flex items-center text-white">
+
+        <button class="ml-auto lg:hidden" type="button" @click="showMenu=true">
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+            </svg>
+        </button>
+
+        <a class="ml-auto hidden items-center gap-2 rounded-full p-2 px-3 text-[13px] font-medium text-white lg:flex"
             href="tel:+">
 
             <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

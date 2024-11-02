@@ -9,6 +9,8 @@
 
     <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <!-- Fonts -->
     <link href="https://fonts.bunny.net" rel="preconnect">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -87,6 +89,8 @@
                 <x-mary-menu-item title="Packages" icon="o-archive-box" :link="route('admin.packages')" :active="request()->routeIs('admin.packages')" />
 
                 <x-mary-menu-item title="Blogs" icon="o-document" :link="route('admin.blogs')" :active="request()->routeIs('admin.packages')" />
+
+                <x-mary-menu-item title="reviews" icon="o-star" :link="route('admin.review')" :active="route('admin.review')" />
             </x-mary-menu>
         </x-slot:sidebar>
 

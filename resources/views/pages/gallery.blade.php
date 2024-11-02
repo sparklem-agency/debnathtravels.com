@@ -22,15 +22,16 @@ name('gallery');
 
         <div>
             @php
-                $photos = App\Models\User::find(1)?->getMedia('photos');
+                $photos = App\Models\User::find(1)?->getMedia('gallery')->unique();
+
             @endphp
 
             <div>
-                @foreach ($photos as $photo)
-                    <div class="md:columns-2 lg:columns-3">
-                        <img class="mt-5 md:mt-0" src="{{ $photo->getUrl() }}" alt="">
-                    </div>
-                @endforeach
+                <div class="md:columns-2 lg:columns-3">
+                    @foreach ($photos as $photo)
+                        <img class="mt-5 w-full first:mt-0" src="{{ $photo->getUrl() }}" alt="">
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

@@ -5,7 +5,8 @@
             <h2 class="text-5xl font-bold capitalize">{{ $title }}</h2>
         </div>
         <div>
-            <a class="block w-fit rounded-full bg-blue-800 p-3 px-5 text-white" href="">Book Your Tour Now</a>
+            <a class="block w-fit rounded-full bg-blue-800 p-3 px-5 text-white"
+                href="//wa.me/{{ env('WHATSAPP_NUMBER') }}">Book Your Tour Now</a>
             @if (isset($description) || isset($slot))
                 <p class="mt-5">{{ $description ?? $slot }}</p>
             @endisset

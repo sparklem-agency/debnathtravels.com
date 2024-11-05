@@ -17,6 +17,9 @@
     .link {
         @apply text-blue-500 underline;
     }
+    .primary-button {
+        @apply flex w-fit items-center gap-2 rounded-lg bg-[var(--primary)] p-3 text-white;
+    }
     * {
         font-family: "Poppins", sans-serif;
     }

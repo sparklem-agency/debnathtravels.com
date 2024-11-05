@@ -32,32 +32,7 @@ new class extends Component {
                 </x-slot:actions>
             </x-mary-header>
 
-            @if ($blogs && count($blogs))
-                <div class="grid grid-cols-2 gap-5">
-                    @foreach ($blogs as $blog)
-                        <x-mary-card :title="$blog->title">
-                            <x-slot:subtitle>{{ $blog->created_at->format('d M, Y') }}</x-slot:subtitle>
-
-                            {{ $blog->description }}
-
-                            <x-slot:figure>
-                                <div class="w-full border bg-black">
-                                    <img class="mx-auto aspect-video" src="{{ $blog->thumbnail_url }}" />
-                                </div>
-                            </x-slot:figure>
-                            <x-slot:actions>
-                                <x-mary-button label="Edit" :link="route('admin.blogs.edit', $blog->id)" icon="o-pencil-square" tooltip="Edit" />
-                            </x-slot:actions>
-                        </x-mary-card>
-                    @endforeach
-                </div>
-
-                @if (!count($blogs))
-                    <center>No posts found</center>
-                @endif
-            @endif
-
-            {{ $blogs ? $blogs->links() : '' }}
+            <livewire:datatables.blog-table />
         </div>
     @endvolt
 </x-admin-layout>

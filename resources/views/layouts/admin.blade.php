@@ -91,6 +91,8 @@
                 <x-mary-menu-item title="Blogs" icon="o-document" :link="route('admin.blogs')" :active="request()->routeIs('admin.packages')" />
 
                 <x-mary-menu-item title="reviews" icon="o-star" :link="route('admin.review')" :active="route('admin.review')" />
+
+                <x-mary-menu-item title="cars" icon="o-star" :link="route('admin.cars')" :active="route('admin.cars')" />
             </x-mary-menu>
         </x-slot:sidebar>
 

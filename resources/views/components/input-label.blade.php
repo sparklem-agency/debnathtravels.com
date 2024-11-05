@@ -1,5 +1,5 @@
 @props(['value'])
 
-<x-jui::label {{ $attributes }}>
+<label {{ $attributes->merge(['class' => 'block font-medium text-sm ']) }}>
     {{ $value ?? $slot }}
-</x-jui::label>
+</label>

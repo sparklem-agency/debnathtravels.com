@@ -16,6 +16,8 @@ new class extends Component {
     public $seats;
     public $order;
     public $id;
+    public $price; // Added missing property
+    public $fuel; // Added missing property
 
     function mount()
     {
@@ -26,21 +28,19 @@ new class extends Component {
         }
 
         $this->id = $id;
-
         $car = Car::find($this->id);
 
         if (!$car) {
             abort(404);
         }
 
+        // Initialize properties from the existing car data
         $this->name = $car->name;
-
         $this->seats = $car->seats;
-
         $this->description = $car->description;
-
         $this->type = $car->type;
-
+        $this->price = $car->price; // Set price
+        $this->fuel = $car->fuel; // Set fuel
         $this->order = $car->order;
     }
 
@@ -48,27 +48,31 @@ new class extends Component {
     {
         $this->validate([
             'photo' => ['nullable', 'image'],
-            'name' => ['required'],
-            'description' => ['required'],
-            'seats' => ['required'],
-            'type' => ['required'],
-            'order' => ['required'],
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'seats' => ['required', 'integer'],
+            'type' => ['required', 'string'],
+            'price' => ['required', 'numeric'], // Added validation for price
+            'fuel' => ['required', 'string'], // Added validation for fuel
+            'order' => ['nullable', 'integer'],
         ]);
 
-        $car = $this->id ? Car::find($this->id) : new car();
+        $car = $this->id ? Car::find($this->id) : new Car();
 
+        // Set properties
         $car->name = $this->name;
-
         $car->seats = $this->seats;
-
         $car->description = $this->description;
-
         $car->type = $this->type;
-
+        $car->price = $this->price;
+        $car->fuel = $this->fuel;
         $car->order = $this->order;
 
         if ($car->save()) {
-            $car->addMedia($this->photo)->toCollection('photo');
+            if ($this->photo) {
+                $car->addMedia($this->photo)->toCollection('photo');
+            }
+            $this->redirect(route('admin.cars'));
         }
 
         $this->reset();
@@ -76,15 +80,16 @@ new class extends Component {
 
     function delete(string $id)
     {
-        $car = Car::find($this->id);
+        $car = Car::find($id);
 
-        $car && $car->delete();
+        if ($car) {
+            $car->delete();
+        }
     }
 
     function with()
     {
         $car = Car::find($this->id);
-
         $cars = Car::all();
 
         return compact('car', 'cars');
@@ -93,47 +98,31 @@ new class extends Component {
 
 ?>
 
-<x-admin-layout title="cars">
+<x-admin-layout title="Cars">
     @volt('cars')
         <div>
-            <x-mary-header title="cars" separator />
+            <x-mary-header title="Cars" separator />
 
             <x-mary-form wire:submit='save'>
-                <x-mary-file wire:model='photo' label="avatar">
+                <x-mary-file wire:model='photo' label="Avatar">
                     <img class="size-14"
                         src="{{ $car?->getFirstMediaUrl('photo') ?? 'https://motozitelive.blob.core.windows.net/motozite-live/newcars_images/1670408218No-Image.jpg' }}"
                         alt="">
                 </x-mary-file>
 
                 <x-mary-input label="Name" wire:model='name' />
-
-                <x-mary-textarea label="description" wire:model='description' />
-
-                <x-mary-input label='type' wire:model="type" />
-
-                <x-mary-input label='Seats' wire:model="seats" />
-
-                <x-mary-input label='order' wire:model="order" />
+                <x-mary-textarea label="Description" wire:model='description' />
+                <x-mary-input label="Type" wire:model="type" />
+                <x-mary-input label="Seats" wire:model="seats" />
+                <x-mary-input label="Order" wire:model="order" />
+                <x-mary-input label="Price" wire:model="price" /> <!-- Added missing field for price -->
+                <x-mary-input label="Fuel" wire:model="fuel" /> <!-- Added missing field for fuel -->
 
                 <x-slot:actions>
                     <x-mary-button type="submit">Save</x-mary-button>
                 </x-slot:actions>
             </x-mary-form>
 
-            <div>
-                @foreach ($cars as $car)
-                    <div>
-                        <button type="button" wire:confirm='are you sure?' wire:click='delete("{{ $car->id }}")'>
-                            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z">
-                                </path>
-                            </svg>
-                        </button>
-                        <x-car-card :car="$car" />
-                    </div>
-                @endforeach
-            </div>
         </div>
     @endvolt
 </x-admin-layout>

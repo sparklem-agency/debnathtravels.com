@@ -1,9 +1,7 @@
 <div {{ $attributes }}>
-    <div class="bg-ptrn-1 rounded-3xl bg-[#FBE0E0] p-5 py-16">
-        <x-heading title="The Best Car Collection">
-            Explore the best of Northeast India with our expertly curated tour packages. Let us guide you to
-            breathtaking
-            landscapes, rich cultures, and unforgettable experiences in this enchanting region.
+    <div class="bg-ptrn-2 rounded-3xl bg-white p-5 py-10">
+        <x-heading title="Car rental">
+            The Best Car Collection
         </x-heading>
 
         <div class="relative mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">

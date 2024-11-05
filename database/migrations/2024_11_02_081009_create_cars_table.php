@@ -14,7 +14,12 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->text('description'); // Changed to text to allow for longer descriptions
+            $table->string('type')->nullable(); // Optional: Car type (e.g., SUV, sedan)
+            $table->integer('seats')->nullable(); // Optional: Number of seats
+            $table->decimal('price', 10, 2)->nullable(); // Optional: Price with two decimal places
+            $table->string('fuel')->nullable(); // Optional: Fuel type (e.g., gas, diesel)
+            $table->integer('order')->nullable()->default(0); // Optional: Order or display priority
             $table->timestamps();
         });
     }

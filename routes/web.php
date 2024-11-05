@@ -34,7 +34,7 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     });
 
     Route::prefix('cars')->group(function () {
-
+        Route::view('/', 'pages.admin.cars')->name('admin.cars');
 
         Route::view('create', 'pages.admin.save-car')->name('admin.cars.create');
 

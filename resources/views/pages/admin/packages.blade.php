@@ -32,19 +32,7 @@ new class extends Component {
                 </x-slot:actions>
             </x-mary-header>
 
-            @if ($packages && count($packages))
-                <div class="grid grid-cols-1 gap-10 p-2 lg:grid-cols-4 lg:p-5">
-                    @foreach ($packages as $package)
-                        <x-package-card :item="$package" editable />
-                    @endforeach
-
-                </div>
-                @if (!count($packages))
-                    <center>No posts found</center>
-                @endif
-            @endif
-
-            {{ $packages ? $packages->links() : '' }}
+            <livewire:datatables.package-table />
         </div>
     @endvolt
 </x-admin-layout>

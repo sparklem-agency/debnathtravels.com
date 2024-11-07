@@ -7,50 +7,53 @@ $places = Place::orderby('ordering')->get();
     <x-heading title="Places">
         Visit Wonderful places at lowest prices
     </x-heading>
-    <swiper-container class="hidden lg:block" pagination="true" pagination-clickable="true" space-between="30"
-        slides-per-view="4">
-        @foreach ($places as $place)
-            <swiper-slide>
-                <div class="group relative aspect-square overflow-hidden rounded-3xl bg-black bg-cover bg-no-repeat ring-2"
-                    data-aos="flip-right">
-                    <img class="transition-all duration-300 ease-in-out group-hover:scale-150"
-                        src="{{ $place->getFirstMediaUrl('photo') }}" alt="">
-                    <div
-                        class="absolute -bottom-40 mx-auto w-full px-3 transition-all duration-300 ease-in-out group-hover:-bottom-1">
-                        <div class="rounded-t-3xl bg-black p-1 text-center text-white ring-2">
-                            {{ $place->name }}
 
-                            <div class="h-2"></div>
+    <div class="mt-10">
 
-                        </div>
+        <swiper-container class="hidden lg:block" pagination="true" pagination-clickable="true" space-between="30"
+            slides-per-view="4">
+            @foreach ($places as $place)
+                <swiper-slide>
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-black bg-cover bg-no-repeat ring-2"
+                        data-aos="flip-right">
+                        <img class="transition-all duration-300 ease-in-out group-hover:scale-150"
+                            src="{{ $place->getFirstMediaUrl('photo') }}" alt="">
+                        <div
+                            class="absolute -bottom-40 mx-auto w-full px-3 transition-all duration-300 ease-in-out group-hover:-bottom-1">
+                            <div class="rounded-t-3xl bg-black p-1 text-center text-white ring-2">
+                                {{ $place->name }}
 
-                    </div>
-                </div>
-            </swiper-slide>
-        @endforeach
-    </swiper-container>
+                                <div class="h-2"></div>
 
-    <swiper-container class="block lg:hidden" pagination="true" pagination-clickable="true" space-between="30"
-        slides-per-view="2">
-        @foreach ($places as $place)
-            <swiper-slide>
-                <div class="group relative aspect-square overflow-hidden rounded-3xl bg-black bg-cover bg-no-repeat ring-2"
-                    data-aos="flip-right">
-                    <img class="transition-all duration-300 ease-in-out group-hover:scale-150"
-                        src="{{ $place->getFirstMediaUrl('photo') }}" alt="">
-                    <div
-                        class="absolute -bottom-40 mx-auto w-full px-3 transition-all duration-300 ease-in-out group-hover:-bottom-1">
-                        <div class="rounded-t-3xl bg-black p-1 text-center text-white ring-2">
-                            {{ $place->name }}
-
-                            <div class="h-2"></div>
+                            </div>
 
                         </div>
-
                     </div>
-                </div>
-            </swiper-slide>
-        @endforeach
-    </swiper-container>
+                </swiper-slide>
+            @endforeach
+        </swiper-container>
 
+        <swiper-container class="block lg:hidden" pagination="true" pagination-clickable="true" space-between="30"
+            slides-per-view="2">
+            @foreach ($places as $place)
+                <swiper-slide>
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-black bg-cover bg-no-repeat ring-2"
+                        data-aos="flip-right">
+                        <img class="transition-all duration-300 ease-in-out group-hover:scale-150"
+                            src="{{ $place->getFirstMediaUrl('photo') }}" alt="">
+                        <div
+                            class="absolute -bottom-40 mx-auto w-full px-3 transition-all duration-300 ease-in-out group-hover:-bottom-1">
+                            <div class="rounded-t-3xl bg-black p-1 text-center text-white ring-2">
+                                {{ $place->name }}
+
+                                <div class="h-2"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </swiper-slide>
+            @endforeach
+        </swiper-container>
+    </div>
 </div>

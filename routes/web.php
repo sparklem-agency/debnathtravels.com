@@ -41,6 +41,14 @@ Route::prefix('admin')->middleware('admin')->group(function () {
         Route::view('edit/{id}', 'pages.admin.save-car')->name('admin.cars.edit');
     });
 
+    Route::prefix('places')->group(function () {
+        Route::view('/', 'pages.admin.places')->name('admin.places');
+
+        Route::view('create', 'pages.admin.save-place')->name('admin.places.create');
+
+        Route::view('edit/{id}', 'pages.admin.save-place')->name('admin.places.edit');
+    });
+
     Route::view('/reviews', 'pages.admin.save-review')->name('admin.review');
 
     Route::view('/gallery', 'pages.admin.save-gallery')->name('admin.gallery');

@@ -12,8 +12,8 @@ class BlogTable extends Datatable
     function table(): array
     {
         return [
-            $this->field('Title')->value('title'),
-            $this->field('Description')->value('description'),
+            $this->field('title'),
+            $this->field('description'),
             $this->field('Actions')->value(function ($row) {
                 $editUrl = route('blogs.edit', $row->id);
                 $deleteUrl = route('blogs.delete', $row->id);

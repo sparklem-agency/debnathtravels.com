@@ -93,6 +93,8 @@
                 <x-mary-menu-item title="reviews" icon="o-star" :link="route('admin.review')" :active="route('admin.review')" />
 
                 <x-mary-menu-item title="cars" icon="o-star" :link="route('admin.cars')" :active="route('admin.cars')" />
+
+                <x-mary-menu-item title="places" icon="o-star" :link="route('admin.places')" :active="route('admin.places')" />
             </x-mary-menu>
         </x-slot:sidebar>
 

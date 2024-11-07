@@ -1,63 +1,31 @@
+<?php
+
+use App\Models\Car;
+$cars = Car::all();
+?>
 <div {{ $attributes }}>
-    <div class="bg-ptrn-2 rounded-3xl bg-white p-5 py-10">
+    <div class="bg-ptrn-2 rounded-3xl bg-white py-10" data-aos="fade-up">
         <x-heading title="Car rental">
             The Best Car Collection
         </x-heading>
 
-        <div class="relative mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div class="relative">
-                <div
-                    class="absolute left-2 top-2 z-10 w-fit rounded-full bg-[#1B202E] p-3 text-xs uppercase text-[#FFD700]">
-                    vip car</div>
-                <div class="relative overflow-hidden rounded-2xl bg-slate-100">
-                    <img src="https://amittravels.in/wp-content/uploads/2024/09/innova-1024x1024.png" alt="">
-                </div>
-                <div class="relative z-10 -mt-5 rounded-2xl bg-[#1B202E] p-4 text-white">
-                    <h2 class="text-xl font-bold">Innova Crysta</h2>
-                    <br>
-                    <p>Starting From <b>500 rs</b> per person</p>
-                    <div
-                        class="mt-3 w-fit rounded-full bg-white p-2 text-center text-xs font-medium uppercase text-black">
-                        7
-                        Seaters</div>
-                </div>
-            </div>
-
-            <div class="relative">
-                <div
-                    class="absolute left-2 top-2 z-10 w-fit rounded-full bg-[#1B202E] p-3 text-xs uppercase text-[#FFD700]">
-                    MINI XUV CAR</div>
-                <div class="relative overflow-hidden rounded-2xl bg-slate-100">
-                    <img src="https://amittravels.in/wp-content/uploads/2024/09/ertiga-1024x1024.png" alt="">
-                </div>
-                <div class="relative z-10 -mt-5 rounded-2xl bg-[#1B202E] p-4 text-white">
-                    <h2 class="text-xl font-bold">Maruti Suzuki Ertiga</h2>
-                    <br>
-                    <p>Starting From <b>500 rs</b> per person</p>
-                    <div
-                        class="mt-3 w-fit rounded-full bg-white p-2 text-center text-xs font-medium uppercase text-black">
-                        6
-                        Seaters</div>
-                </div>
-            </div>
-
-            <div class="relative">
-                <div
-                    class="absolute left-2 top-2 z-10 w-fit rounded-full bg-[#1B202E] p-3 text-xs uppercase text-[#FFD700]">
-                    SEDAN CAR</div>
-                <div class="relative overflow-hidden rounded-2xl bg-slate-100">
-                    <img src="https://amittravels.in/wp-content/uploads/2024/09/dzire-1024x1024.png" alt="">
-                </div>
-                <div class="relative z-10 -mt-5 rounded-2xl bg-[#1B202E] p-4 text-white">
-                    <h2 class="text-xl font-bold">maruti suzuki dzire</h2>
-                    <br>
-                    <p>Starting From <b>500 rs</b> per person</p>
-                    <div
-                        class="mt-3 w-fit rounded-full bg-white p-2 text-center text-xs font-medium uppercase text-black">
-                        5
-                        Seaters</div>
-                </div>
-            </div>
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-3">
+            @foreach ($cars as $car)
+                <x-car-card :$car />
+            @endforeach
         </div>
+
+        <center>
+            <a class="primary-button mt-10" href="{{ route('gallery') }}">
+                View details
+
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                    </path>
+                </svg>
+            </a>
+        </center>
     </div>
+
 </div>

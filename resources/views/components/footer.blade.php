@@ -12,6 +12,7 @@
                 unique cuisines, and witness the breathtaking beauty that few have experienced. Your adventure
                 awaits—let’s explore the unexplored together!
             </div>
+
         </div>
         <div>
             <div class="flex flex-wrap items-center gap-5">
@@ -60,13 +61,31 @@
                     <li><a href="//wa.me/{{ env('WHATSAPP_NUMBER') }}">Contact</a></li>
                 </ul>
                 <ul class="space-y-3">
-                    <strong>Support</strong>
-                    <li><a href="tel:{{ env('PHONE_NUMBER') }}">{{ env('PHONE_NUMBER') }}</a></li>
+                    <strong>Locate us</strong>
+                    <li>
+                        <a href="https://g.co/kgs/CT3a4zM"> Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003 </a>
+                    </li>
                     {{-- <li><a href="http://">example@gmail.com</a></li> --}}
                 </ul>
             </div>
         </div>
     </div>
+
+    <iframe class="h-72 w-full"
+        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115169.06563544556!2d91.81537408005836!3d25.57055882962167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x37507f40e219c267%3A0xe973f013abd8691f!2sNongkynrih%2C%20Laitumkhrah%2C%20Shillong%2C%20Meghalaya%20793003!3m2!1d25.5705819!2d91.8977756!5e0!3m2!1sen!2sin!4v1730963144124!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="grid grid-cols-1 items-center gap-2 space-y-5 p-5 lg:grid-cols-2">
+        <div>
+            <strong class="font-base">Certificates </strong>
+            <img class="h-14" src="{{ asset('/assets/certified.png') }}" alt="">
+        </div>
+        <div>
+            <strong class="font-base"s>We accept (more) </strong>
+            <img class="h-14" src="{{ asset('/assets/we-accept.png') }}" srcset="" alt="">
+        </div>
+    </div>
+
     <div class="border-t p-5 text-center">
         © {{ date('Y') }} Debnath Travels. All rights reserved.
     </div>

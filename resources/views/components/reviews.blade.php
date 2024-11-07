@@ -4,7 +4,7 @@ use App\Models\Review;
 $reviews = Review::paginate();
 ?>
 
-<div class="rounded-2xl bg-gray-50 p-5 py-16">
+<div class="rounded-2xl bg-gray-50 p-5 py-16" data-aos="fade-up">
 
     <x-heading title="Rating & Reviews">
         Here's what our clients are saying:
@@ -13,6 +13,9 @@ $reviews = Review::paginate();
         and recommend us with confidence
     </x-heading>
     <div class="mt-5">
+        @if (!count($reviews))
+            <center><i>Reviews are being updated</i></center>
+        @endif
         <swiper-container class="hidden space-x-5 md:block" slides-per-view="3" autoplay="true" speed="500" loop="true"
             css-mode="true">
             @foreach ($reviews as $review)

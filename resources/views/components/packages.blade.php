@@ -4,15 +4,15 @@ use App\Models\Package;
 $packages = Package::paginate();
 ?>
 
-<div class="rounded-2xl bg-gray-200 p-5 py-16">
+<div class="w-full rounded-2xl bg-gray-200 py-16" data-aos="fade-up">
     <x-heading class="mt-8" title="Packages">
         Top Places At Unbeatable prices
     </x-heading>
 
-    <div class="mt-5">
+    <div class="mt-5 w-full">
         @if ($packages && count($packages))
 
-            <div class="grid grid-cols-1 gap-10 p-2 lg:grid-cols-3 lg:p-5">
+            <div class="flex flex-shrink-0 flex-row gap-5 overflow-x-auto p-4">
                 @foreach ($packages as $package)
                     <x-package-card :item="$package" :editable="false" />
                 @endforeach

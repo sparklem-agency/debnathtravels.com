@@ -1,18 +1,19 @@
 <x-app-layout title="Home">
 
-    {{-- style="background-image: url('{{ asset('/assets/hero-bg.png') }}')"  --}}
-    <div class="bg-black bg-cover bg-center pb-10 pt-20" x-data=" {
-         colors: [`red`, `green`, `blue`],
-         currentColor: `red`,
-         startChanging() {
-             setInterval(() => {
-    
-                 this.currentColorIndex =
-                     Math.floor(Math.random() * this.colors.length);
-                 this.currentColor = this.colors[this.currentColorIndex];
-             }, 3000);
-         }
-     }" x-init="startChanging()">
+    <div class="bg-black bg-cover bg-center pb-10 pt-20"
+        style="background-image: url('{{ asset('/assets/hero-bg.png') }}')" x-data=" {
+             colors: [`orange`, `yellow`, `blue`],
+             currentColor: `red`,
+             startChanging() {
+                 setInterval(() => {
+        
+                     this.currentColorIndex =
+                         Math.floor(Math.random() * this.colors.length);
+                     this.currentColor = this.colors[this.currentColorIndex];
+                 }, 3000);
+             }
+         }"
+        x-init="startChanging()">
 
         <div class="mt-5 grid grid-cols-1 p-5 text-white">
             <div class="mx-auto max-w-xl">
@@ -40,7 +41,7 @@
                         </x-slot:svg>
 
                         <x-slot:text>
-                            <b>Google</b>
+                            <b class="font-medium">Google</b>
                             <p>Verified</p>
                         </x-slot:text>
                     </x-hero-icon>
@@ -56,7 +57,7 @@
                         </x-slot:svg>
 
                         <x-slot:text>
-                            <b>MSME</b>
+                            <b class="font-medium">MSME</b>
                             <p>Certified</p>
                         </x-slot:text>
                     </x-hero-icon>
@@ -72,7 +73,7 @@
                         </x-slot:svg>
 
                         <x-slot:text>
-                            <b>5 Years of</b>
+                            <b class="font-medium">18 Years of</b>
                             <p>Experience</p>
                         </x-slot:text>
                     </x-hero-icon>
@@ -96,29 +97,30 @@
                     e.preventDefault();
             
                     window.location.href = '//wa.me/{{ env('WHATSAPP_NUMBER') }}?text=' + `**Booking request** : 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **name** :${this.name},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ** phone number ** :${this.phoneNumber},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ** Date ** :${this.date}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        **name** :${this.name},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ** phone number ** :${this.phoneNumber},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ** Date ** :${this.date}`;
                 }
             }">
             <h2 class="text-2xl lg:hidden">Book You Trip</h2>
             <div class="space-y-2">
                 <x-input-label value="Name" />
-                <x-text-input class="w-full p-3" x-model="name" required placeholder="Name" />
+                <x-text-input class="w-full p-3 !text-black" x-model="name" required placeholder="Name" />
             </div>
             <div class="space-y-2">
                 <x-input-label value="Phone Number" />
-                <x-text-input class="w-full p-3" type="tel" x-model="phoneNumber" required
+                <x-text-input class="w-full p-3 !text-black" type="tel" x-model="phoneNumber" required
                     placeholder="Phone Number" />
             </div>
             <div class="space-y-2">
                 <x-input-label value="Choose Date" />
-                <x-text-input class="w-full p-3" type="date" x-model="date" required placeholder="Trip Date" />
+                <x-text-input class="w-full p-3 !text-black" type="date" x-model="date" required
+                    placeholder="Trip Date" />
 
             </div>
 
             <div>
-                <x-primary-button class="mt-[30px] h-12 justify-center rounded-3xl p-5" type="submit"
+                <x-primary-button class="h-12 justify-center rounded-3xl p-5 lg:mt-[30px]" type="submit"
                     @submit="handleSubmit">
                     <div class="flex gap-2">
                         <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -141,26 +143,26 @@
         <x-car-collection />
     </div>
 
-    <div class="mt-10 p-5">
+    <div class="mt-10 p-3">
         <x-packages />
     </div>
-    <div class="mt-10 p-5">
+    <div class="mt-10 p-3">
         <x-accommodation />
     </div>
 
-    <div class="mt-10 p-5">
+    <div class="mt-10 p-3">
         <x-why-choose-us />
     </div>
 
-    <div class="mt-10 p-5">
+    <div class="mt-10 p-3">
         <x-reviews />
     </div>
 
-    <div class="mt-10 p-5">
+    <div class="mt-10 p-3">
         <x-our-journey />
     </div>
 
-    <div class="mt-10">
+    <div class="mt-10 p-3">
         <x-newsletter />
     </div>
 

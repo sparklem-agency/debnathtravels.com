@@ -1,4 +1,4 @@
-<div class="min-h-96 grid place-items-center bg-cover bg-no-repeat"
+<div class="min-h-96 grid place-items-center bg-cover bg-no-repeat" data-aos="fade-up"
     style="background-image: url({{ url('assets/before-footer-bg.png') }})">
 
     <div class="w-full max-w-md p-4 text-center">

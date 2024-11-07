@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->mediumText('description');
             $table->string('tags')->nullable();
+            $table->string('places')->nullable();
+            $table->string('duration')->nullable();
             $table->timestamps();
         });
     }

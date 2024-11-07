@@ -12,16 +12,23 @@
         </x-heading>
 
         <br>
-        <b>Debnath Tours is your gateway to unforgettable travel experiences. Established with a passion for exploration
-            and a commitment to excellence, we are a leading travel agency dedicated to crafting personalized and unique
-            journeys for every traveler. Whether you're seeking serene landscapes, cultural adventures, or thrilling
-            expeditions, Debnath Tours is here to make your travel dreams a reality.
+        <div class="mx-auto max-w-md italic">
+            <b>Debnath Tours is your gateway to unforgettable travel experiences. Established with a passion for
+                exploration
+                and a commitment to excellence, we are a leading travel agency dedicated to crafting personalized and
+                unique
+                journeys for every traveler. Whether you're seeking serene landscapes, cultural adventures, or thrilling
+                expeditions, Debnath Tours is here to make your travel dreams a reality.
 
-            With years of expertise in the travel industry, our team of experienced travel professionals ensures that
-            every detail of your trip is meticulously planned and executed. From selecting the perfect destination to
-            arranging comfortable accommodations, local guides, and immersive experiences, we handle everything, so you
-            can focus on creating memories that last a lifetime.
-        </b>
+                With years of expertise in the travel industry, our team of experienced travel professionals ensures
+                that
+                every detail of your trip is meticulously planned and executed. From selecting the perfect destination
+                to
+                arranging comfortable accommodations, local guides, and immersive experiences, we handle everything, so
+                you
+                can focus on creating memories that last a lifetime.
+            </b>
+        </div>
 
         <div class="mt-10">
             <x-packages />
@@ -30,5 +37,11 @@
         <div class="mt-10">
             <x-car-collection />
         </div>
+
+        <div class="mt-10">
+            <x-why-choose-us />
+        </div>
+
+        <x-cta />
     </div>
 </x-app-layout>

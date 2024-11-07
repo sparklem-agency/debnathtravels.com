@@ -1,4 +1,12 @@
-<nav {{ $attributes->merge(['class' => 'p-3 grid grid-cols-2 lg:grid-cols-3']) }} x-data="{
+<?php
+
+use App\Models\Package;
+
+$packages = Package::all();
+
+?>
+
+<nav {{ $attributes->merge(['class' => 'relative p-3 grid grid-cols-2 lg:grid-cols-3 z-50']) }} x-data="{
     showMenu: false
 }">
     <div>
@@ -8,10 +16,32 @@
         <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
         <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
         <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
-        <a href="{{ route('packages') }}" @class(['p-3', 'active' => request()->routeIs('packages')])>Packages</a>
+        <div class="relative" x-data="{ show: false }" @click.away="show=false">
+
+            <a href="#" @class([
+                'p-3 flex items-center gap-2',
+                'active' => request()->routeIs('packages'),
+            ]) @click="show=!show">Packages
+
+                <svg class="size-4 transition-all duration-300 ease-in-out" :class="show ? 'rotate-180' : 'rotate-0'"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                    </path>
+                </svg>
+            </a>
+
+            <div class="absolute top-full overflow-hidden rounded-md border bg-white shadow-sm" style="display: none"
+                x-show="show" x-transition>
+                @foreach ($packages as $package)
+                    <a class="block whitespace-nowrap p-3 text-black hover:bg-slate-100"
+                        href="{{ route('view-package', $package->id) }}">{{ $package->title }}</a>
+                @endforeach
+            </div>
+        </div>
     </div>
     {{-- mobile menu --}}
-    <div class="fixed inset-0 z-50 grid place-items-center text-white backdrop-blur-3xl" x-transition x-show="showMenu">
+    <div class="fixed bottom-0 right-0 top-0 z-50 w-full max-w-xs bg-white text-black" x-transition x-show="showMenu">
 
         <button class="fixed right-4 top-4" type="button" @click="showMenu=false">
             <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -20,13 +50,38 @@
             </svg>
 
         </button>
-        <div class="flex flex-col items-center justify-center gap-3">
+        <div class="flex flex-col gap-3 p-5">
             <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('home')])>Home</a>
             <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
             <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
+            <div class="relative" x-data="{ show: false }">
+
+                <a href="#" @class([
+                    'p-3 flex items-center gap-2 w-full',
+                    'active' => request()->routeIs('packages'),
+                ]) @click="show=!show">Packages
+
+                    <svg class="size-4 ml-auto transition-all duration-300 ease-in-out"
+                        :class="show ? 'rotate-180' : 'rotate-0'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                        </path>
+                    </svg>
+                </a>
+
+                <div style="display: none" x-show="show" x-transition>
+                    @foreach ($packages as $package)
+                        <a class="block whitespace-nowrap p-3 text-black hover:bg-slate-100"
+                            href="{{ route('view-package', $package->id) }}">{{ $package->title }}</a>
+                    @endforeach
+                </div>
+            </div>
+
             <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
-            <a href="{{ route('packages') }}" @class(['p-3', 'active' => request()->routeIs('packages')])>Packages</a>
+
         </div>
+
     </div>
 
     <div class="flex items-center text-white">

@@ -1,5 +1,4 @@
 <?php
-
 use Mary\Traits\Toast;
 use App\Models\Package;
 use Livewire\Volt\Component;
@@ -10,19 +9,14 @@ new class extends Component {
     use WithFileUploads, Toast;
 
     public string|null $id = null;
-
     public string $title = '';
-
     public string $slug = '';
-
     public string $description = '';
-
     public string $price = '';
-
+    public string|null $places = '';
+    public string|null $duration = ''; // New duration field
     public $tags = [];
-
     public $photos;
-
     public $thumbnail;
 
     function mount()
@@ -40,15 +34,12 @@ new class extends Component {
         }
 
         $this->id = $package->id;
-
         $this->title = $package->title;
-
         $this->slug = $package->slug;
-
         $this->description = $package->description;
-
         $this->price = $package->price;
-
+        $this->places = $package->places;
+        $this->duration = $package->duration; // Load the duration field
         $this->tags = $package->tags;
     }
 
@@ -62,23 +53,22 @@ new class extends Component {
             'slug' => ['required', 'alpha_dash', 'unique:packages,slug,' . $this->id],
             'description' => ['required'],
             'thumbnail' => [$package?->getFirstMediaUrl('thumbnail') ? 'nullable' : 'required', 'image'],
+            'places' => ['nullable', 'string'],
+            'duration' => ['nullable', 'string'], // Add validation rule for duration
         ]);
 
         $package->title = $this->title;
-
         $package->slug = $this->slug;
-
         $package->price = $this->price;
-
         $package->description = $this->description;
-
+        $package->places = $this->places;
+        $package->duration = $this->duration; // Save the duration field
         $package->tags = $this->tags;
 
         if ($package->save()) {
             if ($this->thumbnail) {
                 $package->deleteMediaCollection('thumbnail');
                 $package->addMedia($this->thumbnail)->toCollection('thumbnail');
-
                 $this->reset('thumbnail');
             }
 
@@ -86,64 +76,54 @@ new class extends Component {
                 foreach ($this->photos as $photo) {
                     $package->addMedia($photo)->toCollection('photos');
                 }
-
                 $this->reset('photos');
             }
 
             $this->success('Saved');
-
             $this->redirect(route('admin.packages.edit', $package->id), navigate: true);
         }
     }
+
     function delete_photo(string $id)
     {
         $media = Media::find($id);
-
         $media && $media->delete();
     }
 
     function with()
     {
         $package = Package::find($this->id);
-
         return compact('package');
     }
 };
+
 ?>
 
 <x-admin-layout>
     @volt('save-package')
         <div>
-
             <x-slot:title>{{ $package ? 'Edit package' : 'Create package' }}</x-slot:title>
 
             <x-mary-form wire:submit='save'>
-
                 <x-mary-header :title="$package ? 'Edit package' : 'Create package'" separator />
 
                 <x-mary-file wire:model="thumbnail" label="Thumbnail" accept="image/png, image/jpeg">
                     <img class="h-40 rounded-lg"
                         src="{{ $package?->getFirstMediaUrl('thumbnail') ?? url('/thumbnail-placeholder.jpg') }}" />
-
                 </x-mary-file>
 
                 <x-mary-input wire:model='title' label='Title' />
-
                 <x-mary-input wire:model='slug' label='Slug' :prefix="url('packages/')" />
-
                 <x-mary-input wire:model='price' label='Price' />
-
+                <x-mary-input wire:model='places' label='Places' />
+                <x-mary-input wire:model='duration' label='Duration' /> <!-- New input field for duration -->
                 <x-mary-markdown disk='public' wire:model="description" label="Description" />
-
                 <x-mary-tags label="Tags" wire:model="tags" hint="Hit enter to create a new tag" />
-
                 <x-mary-file wire:model='photos' multiple label="Photos" />
 
                 <div>
                     @php
-
                         $photos = $package?->getMedia('photos');
-
                     @endphp
                     @if ($photos && count($photos))
                         @foreach ($photos as $photo)
@@ -165,7 +145,6 @@ new class extends Component {
                 <x-slot:actions>
                     <x-mary-button type="submit">Save</x-mary-button>
                 </x-slot:actions>
-
             </x-mary-form>
         </div>
     @endvolt

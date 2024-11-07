@@ -1,4 +1,6 @@
-<div {{ $attributes }}>
+<div {{ $attributes->merge([
+    'data-aos' => 'fade-up',
+]) }}>
     <div class="bg-ptrn-2 rounded-2xl bg-[#D7EBFF] p-5 py-16">
         <x-heading class="mt-8" title="Gallery">
             Our journey in pictures

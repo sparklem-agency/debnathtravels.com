@@ -35,5 +35,5 @@ $reviews = Review::paginate();
         </swiper-container>
     </div>
 
-    <a class="primary-button mx-auto mt-5" href="https://g.co/kgs/otFdkJs">View All Reviews</a>
+    <a class="primary-button mx-auto mt-5" href="https://g.page/r/CR9p2KsT8HPpEAE/review">View All Reviews</a>
 </div>

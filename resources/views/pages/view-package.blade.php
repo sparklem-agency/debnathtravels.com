@@ -35,6 +35,14 @@ new class extends Component {
                         <img class="w-full rounded-md shadow-2xl" src="{{ $package->getFirstMediaUrl('thumbnail') }}"
                             srcset="" alt="">
                     </div>
+                    {{-- @php
+
+                        $places = count(explode(',', $package->places));
+                    @endphp
+                    <div>
+                        @foreach ($places as $place)
+                        @endforeach
+                    </div> --}}
 
                     @php
                         $Parsedown = new Parsedown();
@@ -85,6 +93,16 @@ new class extends Component {
                 <x-why-choose-us />
             </div>
 
+            <div class="grid grid-cols-1 items-center gap-2 space-y-5 p-5 lg:grid-cols-2">
+                <div>
+                    <strong class="font-base">Certificates </strong>
+                    <img class="h-14" src="{{ asset('/assets/certified.png') }}" alt="">
+                </div>
+                <div>
+                    <strong class="font-base"s>We accept (more) </strong>
+                    <img class="h-14" src="{{ asset('/assets/we-accept.png') }}" srcset="" alt="">
+                </div>
+            </div>
         </div>
     @endvolt
 </x-app-layout>

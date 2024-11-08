@@ -57,7 +57,7 @@
                     </path>
                 </svg>
             </div>
-            <h2 class="font-medium text-blue-700">Goverment Authorized</h2>
+            <h2 class="font-medium text-blue-700">Government Authorized</h2>
 
             <div class="text-xs">
                 Certified by the Government for Trusted Travel Experiences

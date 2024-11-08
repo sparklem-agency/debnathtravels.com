@@ -12,8 +12,9 @@ $packages = Package::all();
     <div>
         <x-logo />
     </div>
-    <div class="ju0stify-center hidden items-center gap-3 text-[13px] text-white lg:flex">
+    <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
         <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
+        <a href="{{ route('car-rental') }}" @class(['p-3', 'active' => request()->routeIs('car-rental')])>car rental</a>
         <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
         <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
         <div class="relative" x-data="{ show: false }" @click.away="show=false">
@@ -51,9 +52,11 @@ $packages = Package::all();
 
         </button>
         <div class="flex flex-col gap-3 p-5">
-            <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('home')])>Home</a>
+            <a href="{{ route('home') }}" @class(['p-3', 'active' => request()->routeIs('home')])>Home</a>
             <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
             <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
+            <a href="{{ route('car-rental') }}" @class(['p-3', 'active' => request()->routeIs('car-rental')])>Car rental</a>
+
             <div class="relative" x-data="{ show: false }">
 
                 <a href="#" @class([
@@ -73,7 +76,7 @@ $packages = Package::all();
                 <div class="ml-5" style="display: none" x-show="show" x-transition>
                     @foreach ($packages as $package)
                         <a class="block whitespace-nowrap p-3 text-black hover:bg-slate-100"
-                            href="{{ route('view-package', $package->id) }}">{{ $package->title }}</a>
+                            href="{{ route('view-package', $package->slug) }}">{{ $package->title }}</a>
                     @endforeach
                 </div>
             </div>

@@ -25,7 +25,7 @@
 
 <body>
     <x-navbar />
-    <main class="-mt-20">{{ $slot }}</main>
+    <main class="-mt-24">{{ $slot }}</main>
     <x-footer />
 
     <div class="fixed bottom-0 right-0 flex w-fit flex-col items-center gap-2 p-5">

@@ -16,7 +16,7 @@ $cars = Car::all();
         </div>
 
         <center>
-            <a class="primary-button mt-10" href="{{ route('gallery') }}">
+            <a class="primary-button mt-10" href="{{ route('car-rental') }}">
                 View details
 
                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

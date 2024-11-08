@@ -8,7 +8,7 @@
 
     </div>
 
-    <div class="mt-10 grid grid-cols-2 gap-5 lg:grid-cols-4">
+    <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-4">
 
         <div class="flex flex-col items-center justify-center gap-5 rounded-md border bg-white p-3 text-center"
             data-aos="flip-right">
@@ -30,7 +30,7 @@
 
         <div class="flex flex-col items-center justify-center gap-5 rounded-md border bg-white p-3 text-center"
             data-aos="flip-right">
-            <div class="size-10 -mt-5 flex items-center justify-center rounded-full border-4 border-blue-700 lg:mt-0">
+            <div class="size-10 flex items-center justify-center rounded-full border-4 border-blue-700 lg:mt-0">
                 <svg class="size-5 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
@@ -49,17 +49,18 @@
         <div class="flex flex-col items-center justify-center gap-5 rounded-md border bg-white p-3 text-center"
             data-aos="flip-right">
             <div class="size-10 flex items-center justify-center rounded-full border-4 border-blue-700">
+
                 <svg class="size-5 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
-                        d="M22 21H2V19H3V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V9H21V19H22V21ZM17 19H19V11H13V19H15V13H17V19ZM17 9V5H5V19H11V9H17ZM7 11H9V13H7V11ZM7 15H9V17H7V15ZM7 7H9V9H7V7Z">
+                        d="M10.007 2.10377C8.60544 1.65006 7.08181 2.28116 6.41156 3.59306L5.60578 5.17023C5.51004 5.35763 5.35763 5.51004 5.17023 5.60578L3.59306 6.41156C2.28116 7.08181 1.65006 8.60544 2.10377 10.007L2.64923 11.692C2.71404 11.8922 2.71404 12.1078 2.64923 12.308L2.10377 13.993C1.65006 15.3946 2.28116 16.9182 3.59306 17.5885L5.17023 18.3942C5.35763 18.49 5.51004 18.6424 5.60578 18.8298L6.41156 20.407C7.08181 21.7189 8.60544 22.35 10.007 21.8963L11.692 21.3508C11.8922 21.286 12.1078 21.286 12.308 21.3508L13.993 21.8963C15.3946 22.35 16.9182 21.7189 17.5885 20.407L18.3942 18.8298C18.49 18.6424 18.6424 18.49 18.8298 18.3942L20.407 17.5885C21.7189 16.9182 22.35 15.3946 21.8963 13.993L21.3508 12.308C21.286 12.1078 21.286 11.8922 21.3508 11.692L21.8963 10.007C22.35 8.60544 21.7189 7.08181 20.407 6.41156L18.8298 5.60578C18.6424 5.51004 18.49 5.35763 18.3942 5.17023L17.5885 3.59306C16.9182 2.28116 15.3946 1.65006 13.993 2.10377L12.308 2.64923C12.1078 2.71403 11.8922 2.71404 11.692 2.64923L10.007 2.10377ZM6.75977 11.7573L8.17399 10.343L11.0024 13.1715L16.6593 7.51465L18.0735 8.92886L11.0024 15.9999L6.75977 11.7573Z">
                     </path>
                 </svg>
             </div>
-            <h2 class="font-medium text-blue-700">Best Hotels</h2>
+            <h2 class="font-medium text-blue-700">Goverment Authorized</h2>
 
             <div class="text-xs">
-                Choose from a wide selection of verified hotels to find the perfect fit for your needs
+                Certified by the Government for Trusted Travel Experiences
             </div>
         </div>
 

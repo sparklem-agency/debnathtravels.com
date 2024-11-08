@@ -31,6 +31,11 @@ new class extends Component {
 
                 <div class="prose mx-auto">
 
+                    <div>
+                        <img class="w-full rounded-md shadow-2xl" src="{{ $package->getFirstMediaUrl('thumbnail') }}"
+                            srcset="" alt="">
+                    </div>
+
                     @php
                         $Parsedown = new Parsedown();
                     @endphp
@@ -39,41 +44,47 @@ new class extends Component {
                 </div>
 
             </div>
+
+            <div class="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-5 p-3">
+                <div class="rounded-md bg-slate-200 p-3">
+                    <strong class="text-green-500">Included</strong>
+                    <br>
+                    <li class="mt-5">Car fuel</li>
+                    <li>Toll free</li>
+                    <li>Driver, driver’s fooding and lodging</li>
+                    <li>Inner line permit</li>
+                    {{-- <li>Bum La pass Scorpio/Bolero</li> --}}
+                    <li>Road tax</li>
+                    {{-- <li>Lodging (Home stay for 2 persons per day ₹2000)</li> --}}
+                </div>
+                <div class="rounded-md bg-slate-200 p-3">
+                    <strong class="text-red-500">Excluded</strong>
+                    <br>
+                    <li class="mt-5">Extra charge</li>
+                    <li>River rafting</li>
+                    <li>All entry point fees</li>
+                    <li>For GST bill, have to pay extra 12%</li>
+                    <li>Fooding</li>
+                    <li>Personal expenses such as laundry, telephone calls, tips, liquor, joy rides, heater charges, etc.
+                    </li>
+                </div>
+            </div>
+
+            <div class="mx-auto mt-10 max-w-xs">
+                <x-cta />
+            </div>
+
+            <div class="mt-10 p-5">
+                <x-contact-form :text="'**package**:' . $package->name" />
+            </div>
+
+            <div class="mt-10">
+
+            </div>
+            <div class="mt-10">
+                <x-why-choose-us />
+            </div>
+
         </div>
     @endvolt
-
-    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-5 p-3">
-        <div class="rounded-md bg-slate-200 p-3">
-            <strong class="text-green-500">Included</strong>
-            <br>
-            <li class="mt-5">Car fuel</li>
-            <li>Toll free</li>
-            <li>Driver, driver’s fooding and lodging</li>
-            <li>Inner line permit</li>
-            {{-- <li>Bum La pass Scorpio/Bolero</li> --}}
-            <li>Road tax</li>
-            {{-- <li>Lodging (Home stay for 2 persons per day ₹2000)</li> --}}
-        </div>
-        <div class="rounded-md bg-slate-200 p-3">
-            <strong class="text-red-500">Excluded</strong>
-            <br>
-            <li class="mt-5">Extra charge</li>
-            <li>River rafting</li>
-            <li>All entry point fees</li>
-            <li>For GST bill, have to pay extra 12%</li>
-            <li>Fooding</li>
-            <li>Personal expenses such as laundry, telephone calls, tips, liquor, joy rides, heater charges, etc.</li>
-        </div>
-    </div>
-
-    <div class="mx-auto mt-10 max-w-xs">
-        <x-cta />
-    </div>
-
-    <div class="mt-10 p-5">
-        <x-car-collection />
-    </div>
-    <div class="mt-10">
-        <x-why-choose-us />
-    </div>
 </x-app-layout>

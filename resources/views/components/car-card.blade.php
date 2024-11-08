@@ -53,7 +53,7 @@
 
         <div class="mx-auto mt-5 flex w-fit items-center overflow-hidden rounded-full">
             <a class="group flex items-center gap-3 bg-white p-3 font-bold text-black"
-                href="tel:+{{ env('PHONE_NUMBER') }}">
+                href="tel:{{ env('PHONE_NUMBER') }}">
 
                 <svg class="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                     <path

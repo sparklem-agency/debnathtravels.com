@@ -12,7 +12,7 @@ $packages = Package::all();
     <div>
         <x-logo />
     </div>
-    <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
+    <div class="ju0stify-center hidden items-center gap-3 text-[13px] text-white lg:flex">
         <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
         <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
         <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
@@ -70,7 +70,7 @@ $packages = Package::all();
                     </svg>
                 </a>
 
-                <div style="display: none" x-show="show" x-transition>
+                <div class="ml-5" style="display: none" x-show="show" x-transition>
                     @foreach ($packages as $package)
                         <a class="block whitespace-nowrap p-3 text-black hover:bg-slate-100"
                             href="{{ route('view-package', $package->id) }}">{{ $package->title }}</a>

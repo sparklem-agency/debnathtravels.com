@@ -1,8 +1,10 @@
-<div class="overflow-hidden rounded-xl" data-aos="flip-right">
-    <img class="w-full" src="{{ $car->getFirstMediaUrl('photo') }}" alt="">
-    <div class="bg-gray-800 p-3 py-5 text-white">
-        <h2 class="text-2xl font-bold">{{ $car->name }}</h2>
-        <p>
+<div class="overflow-hidden rounded-2xl" data-aos="flip-right">
+    <div class="h-80 overflow-hidden bg-gray-800">
+        <img class="w-full object-contain" src="{{ $car->getFirstMediaUrl('photo') }}" alt="">
+    </div>
+    <div class="relative z-10 -mt-5 rounded-2xl bg-gray-800 p-3 py-5 text-white">
+        <h2 class="text-2xl font-bold capitalize">{{ $car->name }}</h2>
+        <p class="mt-3">
             {!! $car->description !!}
         </p>
 

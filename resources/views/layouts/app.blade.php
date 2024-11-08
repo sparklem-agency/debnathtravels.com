@@ -51,11 +51,11 @@
 <script>
     AOS.init();
 </script>
-<script>
+{{-- <script>
     document.addEventListener('contextmenu', function(event) {
         event.preventDefault();
     });
-</script>
+</script> --}}
 
 @livewireScripts
 

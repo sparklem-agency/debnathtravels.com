@@ -20,7 +20,7 @@
         }
     }">
     <div class="h-52 overflow-hidden">
-        <img class="rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"
+        <img class="w-full rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"
             src="{{ $item->getFirstMediaUrl('thumbnail') }}" alt="" />
     </div>
 
@@ -63,7 +63,10 @@
             </div>
         </div>
         <div>
-            <h2 class="text-2xl font-bold">₹ {{ $item->price }}</h2>
+            @if ($item->price)
+                <h2 class="text-2xl font-bold">₹ {{ $item->price }}</h2>
+            @endif
+
         </div>
 
         <div class="grid grid-cols-2 gap-2">

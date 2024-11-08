@@ -4,12 +4,12 @@ use App\Models\Car;
 $cars = Car::all();
 ?>
 <div {{ $attributes }}>
-    <div class="bg-ptrn-2 rounded-3xl bg-white py-10" data-aos="fade-up">
+    <div class="bg-ptrn-2 rounded-3xl bg-blue-50 p-3 py-10" data-aos="fade-up">
         <x-heading title="Car rental">
             The Best Car Collection
         </x-heading>
 
-        <div class="mt-8 grid grid-cols-1 lg:grid-cols-3">
+        <div class="mt-8 grid grid-cols-1 gap-5 space-y-5 lg:grid-cols-3 lg:space-y-0">
             @foreach ($cars as $car)
                 <x-car-card :$car />
             @endforeach

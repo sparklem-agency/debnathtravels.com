@@ -70,6 +70,7 @@ new class extends Component {
 
         if ($car->save()) {
             if ($this->photo) {
+                $car->deleteMediaCollection('photo');
                 $car->addMedia($this->photo)->toCollection('photo');
             }
             $this->redirect(route('admin.cars'));

@@ -1,23 +1,24 @@
+<?php
+
+?>
+
 <div {{ $attributes->merge([
     'data-aos' => 'fade-up',
 ]) }}>
+
+    @php
+        $photos = App\Models\User::find(1)?->getMedia('gallery')?->unique()?->shuffle()->take(4);
+
+    @endphp
     <div class="bg-ptrn-2 rounded-2xl bg-[#D7EBFF] p-5 py-16">
         <x-heading class="mt-8" title="Gallery">
             Our journey in pictures
         </x-heading>
         <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            <div class="overflow-hidden rounded-2xl even:mt-8">
-                <img src="{{ url('assets/our-hotels-1.png') }}" alt="">
-            </div>
-            <div class="overflow-hidden rounded-2xl even:mt-8">
-                <img src="{{ url('assets/our-hotels-2.png') }}" alt="">
-            </div>
-            <div class="overflow-hidden rounded-2xl even:mt-8">
-                <img src="{{ url('assets/our-hotels-3.png') }}" alt="">
-            </div>
-            <div class="overflow-hidden rounded-2xl even:mt-8">
-                <img src="{{ url('assets/our-hotels-4.png') }}" alt="">
-            </div>
+
+            @foreach ($photos as $photo)
+                <img class="rounded-2xl even:mt-8" src="{{ $photo->getUrl() }}" alt="">
+            @endforeach
         </div>
 
         <center>

@@ -42,7 +42,8 @@ $packages = Package::all();
         </div>
     </div>
     {{-- mobile menu --}}
-    <div class="fixed bottom-0 right-0 top-0 z-50 w-full max-w-xs bg-white text-black" x-transition x-show="showMenu">
+    <div class="fixed bottom-0 right-0 top-0 z-50 w-full max-w-xs bg-white text-black" style="display: none"
+        x-transition x-show="showMenu">
 
         <button class="fixed right-4 top-4" type="button" @click="showMenu=false">
             <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

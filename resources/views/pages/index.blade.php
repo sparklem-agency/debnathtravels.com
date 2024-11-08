@@ -82,7 +82,7 @@
     </div>
 
     <div
-        class="relative z-20 mx-auto -mt-5 flex w-fit items-center gap-1 rounded-md bg-[var(--primary)] p-2 text-xs text-white">
+        class="relative z-20 mx-auto -mt-5 flex w-fit items-center gap-3 rounded-md bg-[var(--primary)] p-2 text-xs text-white">
         <a class="block" href="{{ url('/') }}">Car rental</a>
         |
         <a class="block whitespace-nowrap">Tour Package</a>

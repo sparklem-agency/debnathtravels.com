@@ -34,4 +34,6 @@ $reviews = Review::paginate();
             @endforeach
         </swiper-container>
     </div>
+
+    <a class="primary-button mx-auto mt-5" href="https://g.co/kgs/otFdkJs">View All Reviews</a>
 </div>

@@ -14,10 +14,10 @@
         <x-heading class="mt-8" title="Gallery">
             Our journey in pictures
         </x-heading>
-        <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div class="mt-10 columns-2 gap-4 lg:columns-4">
 
             @foreach ($photos as $photo)
-                <img class="rounded-2xl even:mt-8" src="{{ $photo->getUrl() }}" alt="">
+                <img class="break-inside-avoid-column rounded-2xl even:mt-8" src="{{ $photo->getUrl() }}" alt="">
             @endforeach
         </div>
 

@@ -24,6 +24,10 @@ new class extends Component {
 
         $place = Place::find($this->id);
 
+        if (!$place) {
+            abort(404);
+        }
+
         $this->name = $place->name;
 
         $this->ordering = $place->ordering;

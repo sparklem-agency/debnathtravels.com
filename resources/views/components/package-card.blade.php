@@ -1,7 +1,13 @@
 @props(['item', 'editable'])
 
 <div class="relative inline-block w-full max-w-xs flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
-    data-aos="flip-right" x-data="{
+    data-aos="flip-right">
+    <div class="h-52 overflow-hidden">
+        <img class="w-full rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"
+            src="{{ $item->getFirstMediaUrl('thumbnail') }}" alt="" />
+    </div>
+
+    <button class="absolute right-2 top-2 rounded-full bg-white p-3" type="button " x-data="{
         async share() {
             if (navigator.share) {
                 try {
@@ -18,13 +24,7 @@
                 alert('Web Share API is not supported in your browser.');
             }
         }
-    }">
-    <div class="h-52 overflow-hidden">
-        <img class="w-full rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"
-            src="{{ $item->getFirstMediaUrl('thumbnail') }}" alt="" />
-    </div>
-
-    <button class="absolute right-2 top-2 rounded-full bg-white p-3" type="button " @click="share">
+    }" @click="share">
 
         <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path

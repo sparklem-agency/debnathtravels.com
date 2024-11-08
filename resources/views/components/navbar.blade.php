@@ -36,7 +36,7 @@ $packages = Package::all();
                 x-show="show" x-transition>
                 @foreach ($packages as $package)
                     <a class="block whitespace-nowrap p-3 text-black hover:bg-slate-100"
-                        href="{{ route('view-package', $package->id) }}">{{ $package->title }}</a>
+                        href="{{ route('view-package', $package->slug) }}">{{ $package->title }}</a>
                 @endforeach
             </div>
         </div>

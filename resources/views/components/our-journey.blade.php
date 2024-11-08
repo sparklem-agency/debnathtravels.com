@@ -17,7 +17,7 @@
         <div class="mt-10 columns-2 gap-4 lg:columns-4">
 
             @foreach ($photos as $photo)
-                <img class="break-inside-avoid-column rounded-2xl even:mt-8" src="{{ $photo->getUrl() }}" alt="">
+                <img class="break-inside-avoid-column rounded-2xl" src="{{ $photo->getUrl() }}" alt="">
             @endforeach
         </div>
 

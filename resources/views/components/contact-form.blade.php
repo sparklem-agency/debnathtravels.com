@@ -8,8 +8,8 @@
         handleSubmit(e) {
             e.preventDefault();
     
-            window.location.href = '//wa.me/{{ env('WHATSAPP_NUMBER') }}?text=' + `**Booking request** :  **name** :${this.name},** phone number ** :${this.phoneNumber},** Date ** :${this.date} : 
-                            {{ $text }}`;
+            window.location.href = '//wa.me/{{ env('WHATSAPP_NUMBER') }}?text=' + `*Booking request* :  *name* :${this.name},*phone number* :${this.phoneNumber},*Date* :${this.date} : 
+                                {{ $text }}`;
         }
     }" @submit.prevent="handleSubmit">
     <h2 class="text-center text-2xl lg:hidden">Book You Trip</h2>

@@ -32,12 +32,12 @@
                         details</h2>
 
                     <div>
-                        <b>Bank Name :</b> Punjab National Bank
+                        <b>Bank Name :</b> *********
                     </div>
 
-                    <div><b>Account Number :</b> 1115002100005602</div>
+                    <div><b>Account Number :</b> *********</div>
 
-                    <div><b>IFSC :</b> PUNBO11500</div>
+                    <div><b>IFSC :</b> *********</div>
 
                 </div>
 
@@ -45,7 +45,7 @@
                     <strong>UPI details</strong>
 
                     <div>
-                        9862889339m@pnb
+                        **********
                     </div>
 
                 </div>

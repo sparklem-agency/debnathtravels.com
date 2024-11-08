@@ -9,6 +9,14 @@ class PlaceTable extends Datatable
 {
     public $model = Place::class;
 
+    public function delete(string $id)
+    {
+        $package = Place::find($id);
+        if ($package) {
+            $package->delete();
+        }
+    }
+
     function table(): array
     {
         return [
@@ -24,7 +32,7 @@ HTML;
 
                 return <<<HTML
                     <a href="{$editUrl}" class="btn btn-sm btn-primary">Edit</a>
-                    
+                    <button type="button" wire:confirm="Are you sure?" wire:click="delete('{$row->id}')" class="btn btn-sm btn-danger" wire:loading.class="opacity-55" wire:target="delete('{$row->id}')">Delete</button>
 HTML;
             })
         ];

@@ -35,5 +35,7 @@ $reviews = Review::paginate();
         </swiper-container>
     </div>
 
-    <a class="primary-button mx-auto mt-5" href="https://g.page/r/CR9p2KsT8HPpEAE/review">View All Reviews</a>
+    <a class="primary-button mx-auto mt-5"
+        href="https://www.google.com/search?q=DEBNATH+TOUR+AND+TRAVELS+(AGENCY)&rlz=1C1ONGR_enIN1024IN1024&oq=DEBNATH+TOUR+AND+TRAVELS+(AGENCY)&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDwyBggDEEUYPTIGCAQQRRg80gEHNjU2ajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8#lrd=0x37507f40e219c267:0xe973f013abd8691f,1,,,,">View
+        All Reviews</a>
 </div>

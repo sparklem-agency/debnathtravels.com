@@ -9,7 +9,7 @@
                 </x-slot:actions>
             </x-mary-header>
 
-            <livewire:datatables.place-table />
+            <livewire:DataTables.place-table />
         </div>
     @endvolt
 </x-admin-layout>

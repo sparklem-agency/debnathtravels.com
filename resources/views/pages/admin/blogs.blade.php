@@ -32,7 +32,7 @@ new class extends Component {
                 </x-slot:actions>
             </x-mary-header>
 
-            <livewire:datatables.blog-table />
+            <livewire:DataTables.blog-table />
         </div>
     @endvolt
 </x-admin-layout>

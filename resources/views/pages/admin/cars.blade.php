@@ -9,7 +9,7 @@
                 </x-slot:actions>
             </x-mary-header>
 
-            <livewire:datatables.car-table />
+            <livewire:DataTables.car-table />
         </div>
     @endvolt
 </x-admin-layout>

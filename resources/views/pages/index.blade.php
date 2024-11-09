@@ -1,6 +1,6 @@
 <x-app-layout title="Home">
 
-    <div class="relative bg-black bg-cover bg-center pb-10 pt-20"
+    <div class="relative h-72 bg-black bg-cover bg-center pb-10 pt-20"
         style="background-image: url('{{ asset('/assets/hero-bg.png') }}')" x-data=" {
              colors: [`orange`, `yellow`, `blue`],
              currentColor: `red`,
@@ -15,16 +15,16 @@
          }"
         x-init="startChanging()">
 
-        <div class="mt-5 grid grid-cols-1 p-5 text-white">
+        <div class="grid grid-cols-1 p-5 text-white">
             <div class="mx-auto max-w-xl">
-                <h2 class="text-center text-3xl font-bold capitalize leading-snug text-white">
+                <h2 class="text-center text-xl font-bold capitalize leading-snug text-white">
                     Explore <br>
-                    the <span class="text-[var(--primary)]" :style="{ color: currentColor }">northeast</span> India
+                    the <span>northeast</span> India
 
                     with Us !
                 </h2>
 
-                <div class="mt-5 grid grid-cols-3 gap-4 text-xs">
+                <div class="mt-5 grid grid-cols-3 gap-2 text-[10px]">
                     <x-hero-icon>
                         <x-slot:svg>
                             <svg class="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

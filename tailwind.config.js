@@ -10,7 +10,7 @@ export default {
         "./vendor/joydeep-bhowmik/src/resources/views/components/**/*.blade.php",
         "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
     ],
-    darkMode: "class",
+    darkMode: "false",
 
     theme: {
         extend: {

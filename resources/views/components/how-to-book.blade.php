@@ -9,7 +9,7 @@
 
         <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
-            <div class="grid grid-cols-2 gap-2 rounded-md bg-slate-50 p-1">
+            <div class="grid grid-cols-2 gap-2 rounded-md bg-slate-50 p-3">
                 <div class="space-y-3 p-3 lg:space-y-9">
                     <h2 class="text-xl font-bold">Steps to Book</h2>
 
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-5 rounded-md bg-gray-800 p-3 text-white lg:grid-cols-2">
+            <div class="grid grid-cols-1 gap-5 rounded-md bg-gray-800 p-3 p-3 text-white lg:grid-cols-2">
 
                 <div class="space-y-3">
                     <h2 class="text-xl font-bold"> Bank

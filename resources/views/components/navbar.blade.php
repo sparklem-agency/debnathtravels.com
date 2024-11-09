@@ -13,10 +13,22 @@ $packages = Package::all();
         <x-logo />
     </div>
     <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
-        <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
-        <a href="{{ route('car-rental') }}" @class(['p-3', 'active' => request()->routeIs('car-rental')])>car rental</a>
-        <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
-        <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
+        <a href="{{ route('about') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('about'),
+        ])>About Us</a>
+        <a href="{{ route('car-rental') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('car-rental'),
+        ])>car rental</a>
+        <a href="{{ route('blogs') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('blogs'),
+        ])>Blog</a>
+        <a href="{{ route('gallery') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('gallery'),
+        ])>Gallery</a>
         <div class="relative" x-data="{ show: false }" @click.away="show=false">
 
             <a href="#" @class([

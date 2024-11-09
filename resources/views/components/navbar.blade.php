@@ -13,6 +13,11 @@ $packages = Package::all();
         <x-logo />
     </div>
     <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
+
+        <a href="{{ route('home') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('home'),
+        ])>Home</a>
         <a href="{{ route('about') }}" @class([
             'p-3 whitespace-nowrap',
             'active' => request()->routeIs('about'),

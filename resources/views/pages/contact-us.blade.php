@@ -18,7 +18,7 @@ name('contact');
         <br>
         <div data-aos="fade-up">
 
-            <div class="space-y-5">
+            <div class="items-center justify-center gap-5 space-y-5 lg:mx-auto lg:grid lg:max-w-2xl lg:grid-cols-2">
                 <div>
                     <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -91,6 +91,8 @@ name('contact');
             <x-why-choose-us />
         </div>
 
-        <x-cta />
+        <div class="mx-auto mt-10 max-w-xs">
+            <x-cta />
+        </div>
     </div>
 </x-app-layout>

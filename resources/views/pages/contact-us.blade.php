@@ -10,7 +10,7 @@ name('contact');
         Contact Us
     </x-page-heading>
     <div class="bg-ptrn-2 p-5 py-10">
-        <div class="mx-auto max-w-xs p-3 text-center">
+        <div class="mx-auto max-w-xs p-3 text-center lg:max-w-md">
             Enjoy comfortable and safe rides, eco-friendly practices, and affordable prices, with 24/7 support.
             Discover hidden gems and diverse destinations across Northeast India with a reliable travel partner.
         </div>

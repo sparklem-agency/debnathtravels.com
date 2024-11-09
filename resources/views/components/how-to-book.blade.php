@@ -49,7 +49,8 @@
                     </div>
 
                     <div>
-                        <img class="rounded-lg p-3" src="{{ url('/assets/qr.jpg') }}" srcset="" alt="">
+                        <img class="mt-5 rounded-lg p-3" src="{{ url('/assets/qr.jpg') }}" srcset=""
+                            alt="">
                     </div>
 
                 </div>

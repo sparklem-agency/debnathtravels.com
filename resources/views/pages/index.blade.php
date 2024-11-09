@@ -88,6 +88,9 @@
         <a class="block whitespace-nowrap">Tour Package</a>
 
     </div>
+    <div class="mt-10">
+        <x-banner-slider />
+    </div>
     <div class="p-5">
         <x-contact-form />
     </div>
@@ -96,6 +99,9 @@
         <x-car-collection />
     </div>
 
+    <div class="mt-10">
+        <x-banner-slider />
+    </div>
     <div class="mt-10 p-3">
         <x-packages />
     </div>

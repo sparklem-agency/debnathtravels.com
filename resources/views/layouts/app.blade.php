@@ -37,7 +37,7 @@
     </div>
     <x-footer />
 
-    <div class="fixed bottom-0 right-0 flex w-fit flex-col items-center gap-2 p-5">
+    <div class="fixed bottom-0 right-0 z-20 flex w-fit flex-col items-center gap-2 p-5">
 
         <button class="size-12 block rounded-full border bg-white p-3 text-black" type="button " x-data="{
             async share() {

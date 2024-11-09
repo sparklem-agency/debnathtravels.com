@@ -89,7 +89,7 @@
 
     </div>
     <div class="mt-10">
-        <x-banner-slider />
+        <x-banner-slider pagination="true" />
     </div>
     <div class="p-5">
         <x-contact-form />

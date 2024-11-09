@@ -32,12 +32,12 @@
                         details</h2>
 
                     <div>
-                        <b>Bank Name :</b> *********
+                        <b>Bank Name :</b> Central Bank of India
                     </div>
 
-                    <div><b>Account Number :</b> *********</div>
+                    <div><b>Account Number :</b> 5697528021</div>
 
-                    <div><b>IFSC :</b> *********</div>
+                    <div><b>IFSC :</b> CBIN0282712</div>
 
                 </div>
 
@@ -45,7 +45,11 @@
                     <strong>UPI details</strong>
 
                     <div>
-                        **********
+                        12121775@cbin
+                    </div>
+
+                    <div>
+                        <img src="{{ url('/assets/qr.jpg') }}" srcset="" alt="">
                     </div>
 
                 </div>

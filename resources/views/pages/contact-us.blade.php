@@ -79,10 +79,6 @@ name('contact');
 
         </div>
 
-        <div class="mt-10">
-            <x-how-to-book />
-        </div>
-
         <iframe class="mt-10 h-72 w-full"
             src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115169.06563544556!2d91.81537408005836!3d25.57055882962167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x37507f40e219c267%3A0xe973f013abd8691f!2sNongkynrih%2C%20Laitumkhrah%2C%20Shillong%2C%20Meghalaya%20793003!3m2!1d25.5705819!2d91.8977756!5e0!3m2!1sen!2sin!4v1730963144124!5m2!1sen!2sin"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

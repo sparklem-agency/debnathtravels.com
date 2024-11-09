@@ -4,14 +4,17 @@ use App\Models\Review;
 $reviews = App\Models\User::find(1)?->getMedia('google-reviews');
 ?>
 
-<div class="rounded-2xl bg-gray-50 p-5 py-16" data-aos="fade-up">
+<div class="rounded-2xl bg-gray-50 py-16" data-aos="fade-up">
 
-    <x-heading title="Rating & Reviews">
-        Here's what our clients are saying:
-        They trust us for quality,
-        choose us for reliability,
-        and recommend us with confidence
-    </x-heading>
+    <div class="p-5">
+        <x-heading title="Rating & Reviews">
+            Here's what our clients are saying:
+            They trust us for quality,
+            choose us for reliability,
+            and recommend us with confidence
+        </x-heading>
+    </div>
+
     <div class="mt-5 rounded-md bg-white">
         @if (!count($reviews))
             <center><i>Reviews are being updated</i></center>
@@ -20,7 +23,7 @@ $reviews = App\Models\User::find(1)?->getMedia('google-reviews');
             css-mode="true">
             @foreach ($reviews as $review)
                 <swiper-slide>
-                    <div class="rounded-md bg-white p-3">
+                    <div class="rounded-md bg-white">
                         <img src="{{ $review->getUrl() }}" srcset="" alt="">
                     </div>
                 </swiper-slide>

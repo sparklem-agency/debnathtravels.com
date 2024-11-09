@@ -1,6 +1,6 @@
 @props(['item', 'editable'])
 
-<div class="relative inline-block w-full max-w-[280px] flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+<div class="relative inline-block w-full max-w-[250px] flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
     data-aos="flip-right">
     <div class="h-52 overflow-hidden">
         <img class="w-full rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"
@@ -84,7 +84,7 @@
 
         </div>
 
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2 text-xs">
 
             <a class="0 inline-flex items-center justify-center rounded-lg bg-green-700 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                 href="//wa.me/{{ env('WHATSAPP_NUMBER') }}?text= i want to book *{{ $item->title }}*">

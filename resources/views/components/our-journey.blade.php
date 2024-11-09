@@ -7,14 +7,14 @@
 ]) }}>
 
     @php
-        $photos = App\Models\User::find(1)?->getMedia('gallery')?->unique()?->shuffle()->take(4);
+        $photos = App\Models\User::find(1)?->getMedia('gallery')?->unique()?->shuffle()->take(6);
 
     @endphp
     <div class="bg-ptrn-2 rounded-2xl bg-[#D7EBFF] p-5 py-16">
         <x-heading class="mt-8" title="Gallery">
             Our journey in pictures
         </x-heading>
-        <div class="mt-10 columns-2 gap-4 space-y-5 lg:columns-4 lg:space-y-0">
+        <div class="mt-10 columns-2 gap-4 space-y-5 lg:columns-4">
 
             @foreach ($photos as $photo)
                 <img class="break-inside-avoid-column rounded-2xl" src="{{ $photo->getUrl() }}" alt="">

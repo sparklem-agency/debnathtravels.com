@@ -25,10 +25,16 @@
 
 <body>
     <x-navbar />
-    <main class="-mt-24">{{ $slot }}
+    <main class="-mt-24">
+        {{ $slot }}
 
-        <x-how-to-book />
+        <div class="mt-10 p-3">
+            <x-how-to-book />
+        </div>
     </main>
+    <div class="mt-10">
+        <x-newsletter />
+    </div>
     <x-footer />
 
     <div class="fixed bottom-0 right-0 flex w-fit flex-col items-center gap-2 p-5">

@@ -119,8 +119,4 @@
         <x-places />
     </div>
 
-    <div class="mt-10">
-        <x-newsletter />
-    </div>
-
 </x-app-layout>

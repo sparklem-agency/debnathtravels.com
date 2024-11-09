@@ -1,5 +1,5 @@
 @props(['title'])
-<div class="rounded-2xl bg-blue-50 p-3 py-16" data-aos="fade-up">
+<div class="bg-ptrn-2 rounded-2xl bg-blue-50 p-3 py-16" data-aos="fade-up">
 
     <x-heading title='how to book'>
         Get ready for an unforgettable adventure with a custom-tailored tour package designed just for you!

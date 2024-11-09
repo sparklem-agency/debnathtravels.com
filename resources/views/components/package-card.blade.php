@@ -1,6 +1,6 @@
 @props(['item', 'editable'])
 
-<div class="relative inline-block w-full max-w-[250px] flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+<div class="relative inline-block w-full max-w-[250px] flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800 lg:max-w-xs"
     data-aos="flip-right">
     <div class="h-52 overflow-hidden">
         <img class="w-full rounded-t-lg transition-all duration-500 ease-in-out hover:scale-125"

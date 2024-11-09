@@ -12,7 +12,7 @@ $reviews = App\Models\User::find(1)?->getMedia('google-reviews');
         choose us for reliability,
         and recommend us with confidence
     </x-heading>
-    <div class="mt-5">
+    <div class="mt-5 rounded-md bg-white">
         @if (!count($reviews))
             <center><i>Reviews are being updated</i></center>
         @endif

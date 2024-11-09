@@ -9,10 +9,10 @@
             e.preventDefault();
     
             window.location.href = '//wa.me/{{ env('WHATSAPP_NUMBER') }}?text=' + `*Booking request* :  *name* :${this.name},*phone number* :${this.phoneNumber},*Date* :${this.date} : 
-                                {{ $text }}`;
+                                    {{ $text }}`;
         }
     }" @submit.prevent="handleSubmit">
-    <h2 class="text-center text-2xl lg:hidden">Book You Trip</h2>
+    <h2 class="text-center text-xl lg:hidden">Book You Trip</h2>
     <div class="space-y-2">
         <x-input-label value="Name" />
         <x-text-input class="w-full p-3 !text-black" x-model="name" required placeholder="Name" />

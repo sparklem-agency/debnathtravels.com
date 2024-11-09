@@ -108,7 +108,7 @@
     </div>
 
     <div class="mt-10 p-3">
-        <x-reviews />
+        <x-reviews-2 />
     </div>
 
     <div class="mt-10 p-3">

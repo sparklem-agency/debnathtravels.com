@@ -84,7 +84,7 @@
 
         </div>
 
-        <div class="grid grid-cols-2 gap-2 text-xs">
+        <div class="grid grid-cols-1 gap-2 text-xs lg:grid-cols-2">
 
             <a class="0 inline-flex items-center justify-center rounded-lg bg-green-700 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                 href="//wa.me/{{ env('WHATSAPP_NUMBER') }}?text= i want to book *{{ $item->title }}*">

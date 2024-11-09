@@ -74,7 +74,7 @@ $packages = Package::all();
                     </svg>
                 </a>
 
-                <div class="ml-5 space-y-5" style="display: none" x-show="show" x-transition>
+                <div class="ml-5 space-y-2" style="display: none" x-show="show" x-transition>
                     @foreach ($packages as $package)
                         <a class="block p-3 text-black hover:bg-slate-100"
                             href="{{ route('view-package', $package->slug) }}">{{ $package->title }}</a>

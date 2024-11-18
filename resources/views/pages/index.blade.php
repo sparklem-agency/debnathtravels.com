@@ -88,21 +88,26 @@
         <a class="block whitespace-nowrap">Tour Package</a>
 
     </div>
-    <div class="mt-10">
+    <div class="-mt-5">
         <x-banner-slider pagination="true" />
     </div>
     <div class="p-5">
         <x-contact-form />
     </div>
 
+    <div class="mt-10">
+        <img src="{{ url('assets/banners/carrental.jpg') }}?v=2" alt="">
+    </div>
     <div class="mt-10 p-5">
+
         <x-car-collection />
     </div>
 
     <div class="mt-10">
-        <x-banner-slider />
+        <img src="{{ url('assets/banners/packages.jpg') }}?v=2" alt="">
     </div>
     <div class="mt-10 p-3">
+
         <x-packages />
     </div>
     <div class="mt-10 p-3">

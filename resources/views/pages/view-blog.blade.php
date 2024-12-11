@@ -40,12 +40,20 @@ new class extends Component {
                     @php
                         $Parsedown = new Parsedown();
                     @endphp
-                    {!! $Parsedown->text($Blog->description) !!}
+                    <div class="text-xs">
+                        {!! $Parsedown->text($Blog->description) !!}
+                    </div>
 
+
+                    <div class="prose prose-xl mt-5">
+                        {!! $Parsedown->text($Blog->body) !!}
+                    </div>
                 </div>
 
             </div>
 
+
+            <div></div>
             <div class="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-5 p-3">
                 <div class="rounded-md bg-slate-200 p-3">
                     <strong class="text-green-500">Included</strong>

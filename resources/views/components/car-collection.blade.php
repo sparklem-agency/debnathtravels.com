@@ -9,7 +9,7 @@ $cars = Car::all();
             The Best Car Collection
         </x-heading>
 
-        <div class="mt-8 grid grid-cols-1 gap-5 space-y-5 lg:grid-cols-3 lg:space-y-0">
+        <div class="mt-8 grid grid-cols-1 gap-5 space-y-5 lg:grid-cols-4 lg:space-y-0">
             @foreach ($cars as $car)
                 <x-car-card :$car />
             @endforeach

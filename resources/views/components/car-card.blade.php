@@ -1,6 +1,6 @@
 <div class="overflow-hidden rounded-2xl" data-aos="flip-right">
     <div class="h-80 overflow-hidden bg-gray-800">
-        <img class="h-full w-full object-cover" src="{{ $car->getFirstMediaUrl('photo') }}" alt="">
+        <img class="h-full  object-cover" src="{{ $car->getFirstMediaUrl('photo') }}" alt="">
     </div>
     <div class="relative z-10 -mt-5 rounded-2xl bg-gray-800 p-3 py-5 text-white">
         <h2 class="text-2xl font-bold capitalize">{{ $car->name }}</h2>

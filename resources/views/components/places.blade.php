@@ -16,7 +16,7 @@ $places = Place::orderby('ordering')->get();
                 <swiper-slide>
                     <div class="group relative aspect-square overflow-hidden rounded-3xl bg-black bg-cover bg-no-repeat ring-2"
                         data-aos="flip-right">
-                        <img class="transition-all duration-300 ease-in-out group-hover:scale-150"
+                        <img class="transition-all h-full object-cover duration-300 ease-in-out group-hover:scale-150"
                             src="{{ $place->getFirstMediaUrl('photo') }}" alt="">
                         <div
                             class="absolute -bottom-40 mx-auto w-full px-3 transition-all duration-300 ease-in-out group-hover:-bottom-1">

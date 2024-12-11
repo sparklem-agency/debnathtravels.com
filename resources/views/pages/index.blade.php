@@ -96,7 +96,7 @@
     </div>
 
     <div class="mt-10">
-        <img src="{{ url('assets/banners/carrental.jpg') }}?v=2" alt="">
+        <img src="{{ url('assets/banners/carrental.jpg') }}?v=2" class="w-full" alt="">
     </div>
     <div class="mt-10 p-5">
 
@@ -104,7 +104,7 @@
     </div>
 
     <div class="mt-10">
-        <img src="{{ url('assets/banners/packages.jpg') }}?v=2" alt="">
+        <img src="{{ url('assets/banners/packages.jpg') }}?v=2" class="w-full" alt="">
     </div>
     <div class="mt-10 p-3">
 

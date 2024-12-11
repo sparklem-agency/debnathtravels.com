@@ -10,6 +10,8 @@ Route::view('about', 'pages.about-us')->name('about');
 
 Route::view('packages/{slug}', 'pages.view-package')->name('view-package');
 
+Route::view('blos/{slug}', 'pages.view-blog')->name('view-blog');
+
 
 Route::prefix('admin')->middleware('admin')->group(function () {
 

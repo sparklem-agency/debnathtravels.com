@@ -28,7 +28,7 @@ name('blogs');
                             </div>
                         </x-slot:figure>
                         <x-slot:actions>
-                            <x-mary-button label="ReadMore" :link="route('admin.blogs.edit', $blog->id)" icon="o-pencil-square" tooltip="Edit" />
+                            <x-mary-button label="ReadMore" :link="route('admin.blogs.edit', $blog->id)" />
                         </x-slot:actions>
                     </x-mary-card>
                 @endforeach

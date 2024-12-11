@@ -15,11 +15,9 @@ class BlogTable extends Datatable
             $this->field('title'),
             $this->field('description'),
             $this->field('Actions')->value(function ($row) {
-                $editUrl = route('blogs.edit', $row->id);
-                $deleteUrl = route('blogs.delete', $row->id);
+                $editUrl = route('admin.blogs.edit', $row->id);
                 return <<<HTML
                     <a href="{$editUrl}" class="btn btn-sm btn-primary">Edit</a>
-                    <a href="{$deleteUrl}" class="btn btn-sm btn-danger">Delete</a>
 HTML;
             })
         ];

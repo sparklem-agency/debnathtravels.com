@@ -27,9 +27,7 @@ name('blogs');
                                 <img class="mx-auto aspect-video" src="{{ $blog->thumbnail_url }}" />
                             </div>
                         </x-slot:figure>
-                        <x-slot:actions>
-                            <x-mary-button label="ReadMore" :link="route('admin.blogs.edit', $blog->id)" />
-                        </x-slot:actions>
+                        <x-mary-button label="ReadMore" :link="route('view-blog', $blog->id)" />
                     </x-mary-card>
                 @endforeach
             </div>

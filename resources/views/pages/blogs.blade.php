@@ -15,12 +15,14 @@ name('blogs');
     </x-page-heading>
     <div class="p-5 py-10">
         @if ($blogs && count($blogs))
-            <div class="grid grid-cols-2 gap-5">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
                 @foreach ($blogs as $blog)
                     <x-mary-card :title="$blog->title">
                         <x-slot:subtitle>{{ $blog->created_at->format('d M, Y') }}</x-slot:subtitle>
 
-                        {{ $blog->description }}
+                        <div class="hidden lg:block">
+                            {{ $blog->description }}
+                        </div>
 
                         <x-slot:figure>
                             <div class="w-full border bg-black">

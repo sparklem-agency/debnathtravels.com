@@ -12,7 +12,7 @@ $packages = Package::all();
     <div>
         <x-logo />
     </div>
-    <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex">
+    <div class="hidden items-center justify-center gap-3 text-[13px] text-white lg:flex capitalize">
 
         <a href="{{ route('home') }}" @class([
             'p-3 whitespace-nowrap',
@@ -59,7 +59,7 @@ $packages = Package::all();
         </div>
     </div>
     {{-- mobile menu --}}
-    <div class="fixed bottom-0 right-0 top-0 z-50 w-full max-w-xs bg-white text-black" style="display: none"
+    <div class="fixed bottom-0 right-0 top-0 z-50 w-full capitalize max-w-xs bg-white text-black" style="display: none"
         x-transition x-show="showMenu">
 
         <button class="fixed right-4 top-4" type="button" @click="showMenu=false">

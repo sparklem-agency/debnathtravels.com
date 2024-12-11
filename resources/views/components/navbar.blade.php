@@ -29,7 +29,7 @@ $packages = Package::all();
         <a href="{{ route('blogs') }}" @class([
             'p-3 whitespace-nowrap',
             'active' => request()->routeIs('blogs'),
-        ])>Blog</a>
+        ])>Blogs</a>
         <a href="{{ route('gallery') }}" @class([
             'p-3 whitespace-nowrap',
             'active' => request()->routeIs('gallery'),
@@ -72,7 +72,7 @@ $packages = Package::all();
         <div class="flex flex-col gap-3 p-5">
             <a href="{{ route('home') }}" @class(['p-3', 'active' => request()->routeIs('home')])>Home</a>
             <a href="{{ route('about') }}" @class(['p-3', 'active' => request()->routeIs('about')])>About Us</a>
-            <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blog</a>
+            <a href="{{ route('blogs') }}" @class(['p-3', 'active' => request()->routeIs('blogs')])>Blogs</a>
             <a href="{{ route('car-rental') }}" @class(['p-3', 'active' => request()->routeIs('car-rental')])>Car rental</a>
 
             <div class="relative" x-data="{ show: false }">

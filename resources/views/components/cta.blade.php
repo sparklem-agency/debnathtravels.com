@@ -1,5 +1,5 @@
 @props(['text' => null])
-<div class="grid grid-cols-2 gap-2">
+<div class="grid grid-cols-2 gap-2 max-w-xl mx-auto mt-5">
 
     <a class="flex items-center justify-center gap-2 rounded-md border bg-white p-3" href="tel:{{ env('PHONE_NUMBER') }}">
 

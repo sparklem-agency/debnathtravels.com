@@ -57,6 +57,11 @@ $packages = Package::all();
                 @endforeach
             </div>
         </div>
+
+        <a href="{{ route('book') }}" @class([
+            'p-3 whitespace-nowrap',
+            'active' => request()->routeIs('book'),
+        ])>Book</a>
     </div>
     {{-- mobile menu --}}
     <div class="fixed bottom-0 right-0 top-0 z-50 w-full capitalize max-w-xs bg-white text-black" style="display: none"
@@ -100,6 +105,11 @@ $packages = Package::all();
             </div>
 
             <a href="{{ route('gallery') }}" @class(['p-3', 'active' => request()->routeIs('gallery')])>Gallery</a>
+
+            <a href="{{ route('book') }}" @class([
+                'p-3 whitespace-nowrap',
+                'active' => request()->routeIs('book'),
+            ])>Book</a>
 
             <a href="{{ route('contact') }}" @class(['p-3', 'active' => request()->routeIs('contact')])>
 

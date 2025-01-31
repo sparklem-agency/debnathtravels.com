@@ -14,13 +14,16 @@
         <x-heading class="mt-8" title="Gallery">
             Our journey in pictures
         </x-heading>
-        <div class="mt-10 columns-2 gap-4 space-y-5 lg:columns-4">
+        @if ($photos?->count())
 
-            @foreach ($photos as $photo)
-                <img class="break-inside-avoid-column rounded-2xl" src="{{ $photo->getUrl() }}" alt="">
-            @endforeach
-        </div>
 
+            <div class="mt-10 columns-2 gap-4 space-y-5 lg:columns-4">
+
+                @foreach ($photos as $photo)
+                    <img class="break-inside-avoid-column rounded-2xl" src="{{ $photo->getUrl() }}" alt="">
+                @endforeach
+            </div>
+        @endif
         <center>
             <a class="primary-button mt-10" href="{{ route('gallery') }}">
                 View all

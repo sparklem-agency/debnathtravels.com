@@ -16,30 +16,33 @@ $reviews = App\Models\User::find(1)?->getMedia('google-reviews');
     </div>
 
     <div class="mt-5 rounded-md bg-white">
-        @if (!count($reviews))
+
+
+        @if ($reviews?->count())
+            <swiper-container class="hidden space-x-5 md:block" slides-per-view="3" autoplay="true" speed="500"
+                loop="true" css-mode="true">
+                @foreach ($reviews as $review)
+                    <swiper-slide>
+                        <div class="rounded-md bg-white">
+                            <img src="{{ $review->getUrl() }}" srcset="" alt="">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+
+            <swiper-container class="space-x-5 md:hidden" slides-per-view="1" autoplay="true" speed="500"
+                loop="true" css-mode="true">
+                @foreach ($reviews as $review)
+                    <swiper-slide>
+                        <div class="rounded-md bg-white p-3">
+                            <img src="{{ $review->getUrl() }}" srcset="" alt="">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+        @else
             <center><i>Reviews are being updated</i></center>
         @endif
-        <swiper-container class="hidden space-x-5 md:block" slides-per-view="3" autoplay="true" speed="500" loop="true"
-            css-mode="true">
-            @foreach ($reviews as $review)
-                <swiper-slide>
-                    <div class="rounded-md bg-white">
-                        <img src="{{ $review->getUrl() }}" srcset="" alt="">
-                    </div>
-                </swiper-slide>
-            @endforeach
-        </swiper-container>
-
-        <swiper-container class="space-x-5 md:hidden" slides-per-view="1" autoplay="true" speed="500" loop="true"
-            css-mode="true">
-            @foreach ($reviews as $review)
-                <swiper-slide>
-                    <div class="rounded-md bg-white p-3">
-                        <img src="{{ $review->getUrl() }}" srcset="" alt="">
-                    </div>
-                </swiper-slide>
-            @endforeach
-        </swiper-container>
     </div>
 
     <a class="primary-button mx-auto mt-5"

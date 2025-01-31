@@ -1,6 +1,6 @@
 <x-app-layout title="Home">
 
-    <div class="relative h-72 bg-black bg-cover bg-center pb-10 pt-20"
+    <div class="relative h-72 lg:h-[600px] bg-black bg-cover bg-center pb-10 pt-20"
         style="background-image: url('{{ asset('/assets/hero-bg.png') }}')" x-data=" {
              colors: [`orange`, `yellow`, `blue`],
              currentColor: `red`,
@@ -15,7 +15,7 @@
          }"
         x-init="startChanging()">
 
-        <div class="grid grid-cols-1 p-5 text-white">
+        <div class="grid grid-cols-1 p-5 text-white h-full place-items-center">
             <div class="mx-auto max-w-xl">
                 <h2 class="text-center text-xl font-bold capitalize leading-snug text-white">
                     Explore <br>

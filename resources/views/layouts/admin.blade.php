@@ -81,6 +81,7 @@
 
                     <x-mary-menu-separator />
                 @endif
+                <x-mary-menu-item title="Proile" icon="o-user" :link="route('profile')" :active="request()->routeIs('profile')" />
 
                 <x-mary-menu-item title="Dashboard" icon="o-home" :link="route('dashboard')" :active="request()->routeIs('dashboard')" />
 

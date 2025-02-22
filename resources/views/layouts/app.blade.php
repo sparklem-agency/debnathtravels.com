@@ -3,11 +3,6 @@
 <html data-theme="light" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-
-
-
-
-
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -32,7 +27,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
-
+    <meta name="description"
+        content="Debanth Travel – Your trusted travel partner for unforgettable journeys. Explore breathtaking destinations with our expertly curated tours, seamless bookings, and personalized travel experiences. Adventure awaits!">
+    <meta name="keywords"
+        content="Debanth Travel, travel agency, tour packages, adventure travel, holiday bookings, customized tours, Northeast India tours, vacation planning, best travel deals">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
